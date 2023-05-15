@@ -24,6 +24,13 @@
 		AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0172A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift */; };
 		AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */; };
 		AB4AC0222A12CB4A0073BE6F /* SpoonacularAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */; };
+		AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0232A12CD380073BE6F /* SpoonacularAPI+Recipes.swift */; };
+		AB4AC0272A12CEC00073BE6F /* Stubs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4AC0262A12CEC00073BE6F /* Stubs.xcassets */; };
+		AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC02C2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift */; };
+		AB4AC0302A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC02F2A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift */; };
+		AB4AC0342A12D2220073BE6F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0332A12D2220073BE6F /* Helper.swift */; };
+		AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */; };
+		AB4AC0382A12D2A10073BE6F /* Helper+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,13 @@
 		AB4AC0172A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+prettyPrintedJSONString.swift"; sourceTree = "<group>"; };
 		AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
 		AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPITests.swift; sourceTree = "<group>"; };
+		AB4AC0232A12CD380073BE6F /* SpoonacularAPI+Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpoonacularAPI+Recipes.swift"; sourceTree = "<group>"; };
+		AB4AC0262A12CEC00073BE6F /* Stubs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stubs.xcassets; sourceTree = "<group>"; };
+		AB4AC02C2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesComplexSearchDTO.swift; sourceTree = "<group>"; };
+		AB4AC02F2A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesComplexSearchDTOTests.swift; sourceTree = "<group>"; };
+		AB4AC0332A12D2220073BE6F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+DTOs.swift"; sourceTree = "<group>"; };
+		AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,7 @@
 			children = (
 				AB4AC0202A12CB420073BE6F /* API */,
 				AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */,
+				AB4AC0312A12D20F0073BE6F /* Vendors */,
 			);
 			path = SpoonacularTests;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */,
+				AB4AC0232A12CD380073BE6F /* SpoonacularAPI+Recipes.swift */,
 			);
 			path = SpoonacularAPI;
 			sourceTree = "<group>";
@@ -218,7 +234,9 @@
 		AB4AC01F2A12CA480073BE6F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AB4AC0292A12CFDD0073BE6F /* DTOs */,
 				AB4AC01A2A12C8E70073BE6F /* SpoonacularAPI */,
+				AB4AC0252A12CEA40073BE6F /* Vendors */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -227,8 +245,51 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */,
+				AB4AC02E2A12D1C60073BE6F /* DTOs */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		AB4AC0252A12CEA40073BE6F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0262A12CEC00073BE6F /* Stubs.xcassets */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		AB4AC0292A12CFDD0073BE6F /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC02C2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		AB4AC02E2A12D1C60073BE6F /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC02F2A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		AB4AC0312A12D20F0073BE6F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0322A12D2170073BE6F /* Helpers */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		AB4AC0322A12D2170073BE6F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0332A12D2220073BE6F /* Helper.swift */,
+				AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */,
+				AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4ABFDC2A12BFBF0073BE6F /* Assets.xcassets in Resources */,
+				AB4AC0272A12CEC00073BE6F /* Stubs.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +428,12 @@
 				AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */,
 				AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
+				AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */,
 				AB4AC00B2A12C4430073BE6F /* HTTPMethod.swift in Sources */,
 				AB4AC0072A12C4090073BE6F /* NetworkingProvider.swift in Sources */,
 				AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */,
 				AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */,
+				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
 			);
@@ -380,7 +444,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4AC0222A12CB4A0073BE6F /* SpoonacularAPITests.swift in Sources */,
+				AB4AC0302A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift in Sources */,
 				AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */,
+				AB4AC0342A12D2220073BE6F /* Helper.swift in Sources */,
+				AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */,
+				AB4AC0382A12D2A10073BE6F /* Helper+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

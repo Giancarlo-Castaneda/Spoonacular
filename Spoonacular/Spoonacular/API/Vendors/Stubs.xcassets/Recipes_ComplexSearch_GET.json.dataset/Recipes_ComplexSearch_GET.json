@@ -1,0 +1,25 @@
+{
+    "results": [
+        {
+            "id": 1111,
+            "title": "foo.result.0.title",
+            "image": "https://foo.com/image/0.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 2222,
+            "title": "foo.result.1.title",
+            "image": "https://foo.com/image/1.jpg",
+            "imageType": "png"
+        },
+        {
+            "id": 3333,
+            "title": "foo.result.2.title",
+            "image": "https://foo.com/image/2.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 4444,
+    "number": 5555,
+    "totalResults": 6666
+}
