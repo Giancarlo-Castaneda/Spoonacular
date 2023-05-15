@@ -95,11 +95,9 @@
 		AB4ABFD12A12BFBE0073BE6F /* Spoonacular */ = {
 			isa = PBXGroup;
 			children = (
-				AB4ABFD22A12BFBE0073BE6F /* AppDelegate.swift */,
-				AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */,
+				AB4AC0042A12C28B0073BE6F /* App Delegate */,
 				AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */,
-				AB4ABFDB2A12BFBF0073BE6F /* Assets.xcassets */,
-				AB4ABFE02A12BFBF0073BE6F /* Info.plist */,
+				AB4AC0032A12C2490073BE6F /* Resources */,
 			);
 			path = Spoonacular;
 			sourceTree = "<group>";
@@ -119,6 +117,24 @@
 				AB4ABFF52A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift */,
 			);
 			path = SpoonacularUITests;
+			sourceTree = "<group>";
+		};
+		AB4AC0032A12C2490073BE6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB4ABFDB2A12BFBF0073BE6F /* Assets.xcassets */,
+				AB4ABFE02A12BFBF0073BE6F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB4AC0042A12C28B0073BE6F /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AB4ABFD22A12BFBE0073BE6F /* AppDelegate.swift */,
+				AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +428,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2HHD8L7L2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spoonacular/Info.plist;
+				INFOPLIST_FILE = Spoonacular/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -442,7 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2HHD8L7L2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Spoonacular/Info.plist;
+				INFOPLIST_FILE = Spoonacular/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
