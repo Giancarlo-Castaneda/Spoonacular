@@ -51,6 +51,8 @@
 		AB4AC07B2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC07A2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift */; };
 		AB4AC07F2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC07E2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift */; };
 		AB4AC0832A12F4780073BE6F /* ConcreteFetchRecipeListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0822A12F4780073BE6F /* ConcreteFetchRecipeListWorkerTests.swift */; };
+		AB4AC0862A12FBCF0073BE6F /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0852A12FBCF0073BE6F /* HTTPMethodTests.swift */; };
+		AB4AC0882A12FC360073BE6F /* RequestErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0872A12FC360073BE6F /* RequestErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		AB4AC07A2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteFetchRecipeListWorker.swift; sourceTree = "<group>"; };
 		AB4AC07E2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchRecipeListWorker.swift; sourceTree = "<group>"; };
 		AB4AC0822A12F4780073BE6F /* ConcreteFetchRecipeListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteFetchRecipeListWorkerTests.swift; sourceTree = "<group>"; };
+		AB4AC0852A12FBCF0073BE6F /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		AB4AC0872A12FC360073BE6F /* RequestErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 				AB4AC0202A12CB420073BE6F /* API */,
 				AB4AC0442A12DF2C0073BE6F /* Feature Interfaces */,
 				AB4AC0692A12EB7F0073BE6F /* Features */,
+				AB4AC0842A12FBC40073BE6F /* Networking */,
 				AB4AC0312A12D20F0073BE6F /* Vendors */,
 			);
 			path = SpoonacularTests;
@@ -600,6 +605,15 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		AB4AC0842A12FBC40073BE6F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0852A12FBCF0073BE6F /* HTTPMethodTests.swift */,
+				AB4AC0872A12FC360073BE6F /* RequestErrorTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -759,6 +773,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4AC0882A12FC360073BE6F /* RequestErrorTests.swift in Sources */,
+				AB4AC0862A12FBCF0073BE6F /* HTTPMethodTests.swift in Sources */,
 				AB4AC0222A12CB4A0073BE6F /* SpoonacularAPITests.swift in Sources */,
 				AB4AC0302A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift in Sources */,
 				AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */,
