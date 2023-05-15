@@ -22,6 +22,8 @@
 		AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0122A12C52A0073BE6F /* Logger.swift */; };
 		AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0152A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift */; };
 		AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0172A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift */; };
+		AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */; };
+		AB4AC0222A12CB4A0073BE6F /* SpoonacularAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		AB4AC0122A12C52A0073BE6F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AB4AC0152A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+prettyPrintedJSONString.swift"; sourceTree = "<group>"; };
 		AB4AC0172A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+prettyPrintedJSONString.swift"; sourceTree = "<group>"; };
+		AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
+		AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */,
+				AB4AC01F2A12CA480073BE6F /* API */,
 				AB4AC0042A12C28B0073BE6F /* App Delegate */,
+				AB4AC0192A12C8980073BE6F /* Features */,
 				AB4AC0052A12C4010073BE6F /* Networking */,
 				AB4AC0032A12C2490073BE6F /* Resources */,
 				AB4AC0102A12C5200073BE6F /* Utils */,
@@ -123,6 +129,7 @@
 		AB4ABFE82A12BFBF0073BE6F /* SpoonacularTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB4AC0202A12CB420073BE6F /* API */,
 				AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */,
 			);
 			path = SpoonacularTests;
@@ -191,6 +198,37 @@
 				AB4AC0152A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB4AC0192A12C8980073BE6F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AB4AC01A2A12C8E70073BE6F /* SpoonacularAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC01B2A12C90D0073BE6F /* SpoonacularAPI.swift */,
+			);
+			path = SpoonacularAPI;
+			sourceTree = "<group>";
+		};
+		AB4AC01F2A12CA480073BE6F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC01A2A12C8E70073BE6F /* SpoonacularAPI */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AB4AC0202A12CB420073BE6F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0212A12CB4A0073BE6F /* SpoonacularAPITests.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +368,7 @@
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB4AC00B2A12C4430073BE6F /* HTTPMethod.swift in Sources */,
 				AB4AC0072A12C4090073BE6F /* NetworkingProvider.swift in Sources */,
+				AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */,
 				AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
@@ -340,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4AC0222A12CB4A0073BE6F /* SpoonacularAPITests.swift in Sources */,
 				AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
