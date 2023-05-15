@@ -9,4 +9,11 @@ extension Helper {
 
         return RecipeModel(id: id, title: title, image: image)
     }
+
+    static func makeRecipeListModel(recipes: [RecipeModel] = [],
+                                    number: Int = 0,
+                                    totalResults: Int = 0) -> RecipeListModel {
+
+        .init(recipes: recipes, number: number, totalResults: totalResults)
+    }
 }
