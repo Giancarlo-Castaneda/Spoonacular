@@ -31,6 +31,22 @@
 		AB4AC0342A12D2220073BE6F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0332A12D2220073BE6F /* Helper.swift */; };
 		AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */; };
 		AB4AC0382A12D2A10073BE6F /* Helper+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */; };
+		AB4AC0412A12DDF50073BE6F /* RecipeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0402A12DDF50073BE6F /* RecipeListModel.swift */; };
+		AB4AC0432A12DEA10073BE6F /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0422A12DEA10073BE6F /* RecipeModel.swift */; };
+		AB4AC0492A12DF4B0073BE6F /* RecipeListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0482A12DF4B0073BE6F /* RecipeListModelTests.swift */; };
+		AB4AC04B2A12DF910073BE6F /* Helper+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC04A2A12DF910073BE6F /* Helper+Models.swift */; };
+		AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC04E2A12E2780073BE6F /* RecipeRepository.swift */; };
+		AB4AC0542A12E3A90073BE6F /* MockRecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0532A12E3A80073BE6F /* MockRecipeRepository.swift */; };
+		AB4AC0572A12E47F0073BE6F /* AssociatedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0562A12E47F0073BE6F /* AssociatedKeys.swift */; };
+		AB4AC0592A12E48C0073BE6F /* Invocable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0582A12E48C0073BE6F /* Invocable.swift */; };
+		AB4AC05B2A12E49A0073BE6F /* Stubbable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC05A2A12E49A0073BE6F /* Stubbable.swift */; };
+		AB4AC05D2A12E4A30073BE6F /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC05C2A12E4A30073BE6F /* Mockable.swift */; };
+		AB4AC0632A12E6060073BE6F /* ConcreteRecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0622A12E6060073BE6F /* ConcreteRecipeRepository.swift */; };
+		AB4AC0662A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0652A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift */; };
+		AB4AC0682A12E73B0073BE6F /* RecipeModel+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0672A12E73B0073BE6F /* RecipeModel+Result.swift */; };
+		AB4AC06E2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC06D2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift */; };
+		AB4AC0712A12EC810073BE6F /* MockNetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0702A12EC810073BE6F /* MockNetworkingProvider.swift */; };
+		AB4AC0742A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0732A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +95,22 @@
 		AB4AC0332A12D2220073BE6F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+DTOs.swift"; sourceTree = "<group>"; };
 		AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Utils.swift"; sourceTree = "<group>"; };
+		AB4AC0402A12DDF50073BE6F /* RecipeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListModel.swift; sourceTree = "<group>"; };
+		AB4AC0422A12DEA10073BE6F /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		AB4AC0482A12DF4B0073BE6F /* RecipeListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListModelTests.swift; sourceTree = "<group>"; };
+		AB4AC04A2A12DF910073BE6F /* Helper+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Models.swift"; sourceTree = "<group>"; };
+		AB4AC04E2A12E2780073BE6F /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
+		AB4AC0532A12E3A80073BE6F /* MockRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeRepository.swift; sourceTree = "<group>"; };
+		AB4AC0562A12E47F0073BE6F /* AssociatedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedKeys.swift; sourceTree = "<group>"; };
+		AB4AC0582A12E48C0073BE6F /* Invocable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invocable.swift; sourceTree = "<group>"; };
+		AB4AC05A2A12E49A0073BE6F /* Stubbable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubbable.swift; sourceTree = "<group>"; };
+		AB4AC05C2A12E4A30073BE6F /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		AB4AC0622A12E6060073BE6F /* ConcreteRecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeRepository.swift; sourceTree = "<group>"; };
+		AB4AC0652A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeListModel+RecipesComplexSearchDTO.swift"; sourceTree = "<group>"; };
+		AB4AC0672A12E73B0073BE6F /* RecipeModel+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeModel+Result.swift"; sourceTree = "<group>"; };
+		AB4AC06D2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeRepositoryTests.swift; sourceTree = "<group>"; };
+		AB4AC0702A12EC810073BE6F /* MockNetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingProvider.swift; sourceTree = "<group>"; };
+		AB4AC0732A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+XCTAssertThrowsAsyncError.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +164,8 @@
 				AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */,
 				AB4AC01F2A12CA480073BE6F /* API */,
 				AB4AC0042A12C28B0073BE6F /* App Delegate */,
-				AB4AC0192A12C8980073BE6F /* Features */,
+				AB4AC0192A12C8980073BE6F /* Feature Interfaces */,
+				AB4AC05E2A12E5930073BE6F /* Features */,
 				AB4AC0052A12C4010073BE6F /* Networking */,
 				AB4AC0032A12C2490073BE6F /* Resources */,
 				AB4AC0102A12C5200073BE6F /* Utils */,
@@ -143,8 +176,10 @@
 		AB4ABFE82A12BFBF0073BE6F /* SpoonacularTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB4AC0202A12CB420073BE6F /* API */,
 				AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */,
+				AB4AC0202A12CB420073BE6F /* API */,
+				AB4AC0442A12DF2C0073BE6F /* Feature Interfaces */,
+				AB4AC0692A12EB7F0073BE6F /* Features */,
 				AB4AC0312A12D20F0073BE6F /* Vendors */,
 			);
 			path = SpoonacularTests;
@@ -215,11 +250,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AB4AC0192A12C8980073BE6F /* Features */ = {
+		AB4AC0192A12C8980073BE6F /* Feature Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				AB4AC03D2A12DDB90073BE6F /* Recipes Feature Interface */,
 			);
-			path = Features;
+			path = "Feature Interfaces";
 			sourceTree = "<group>";
 		};
 		AB4AC01A2A12C8E70073BE6F /* SpoonacularAPI */ = {
@@ -278,6 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC0322A12D2170073BE6F /* Helpers */,
+				AB4AC0552A12E4700073BE6F /* Mockable */,
+				AB4AC0502A12E3500073BE6F /* Mocks */,
+				AB4AC0722A12EF2D0073BE6F /* XCTestCase */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -287,9 +326,210 @@
 			children = (
 				AB4AC0332A12D2220073BE6F /* Helper.swift */,
 				AB4AC0352A12D24F0073BE6F /* Helper+DTOs.swift */,
+				AB4AC04A2A12DF910073BE6F /* Helper+Models.swift */,
 				AB4AC0372A12D2A10073BE6F /* Helper+Utils.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AB4AC03D2A12DDB90073BE6F /* Recipes Feature Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC03E2A12DDC70073BE6F /* Data */,
+				AB4AC04C2A12E2490073BE6F /* Data Access */,
+			);
+			path = "Recipes Feature Interface";
+			sourceTree = "<group>";
+		};
+		AB4AC03E2A12DDC70073BE6F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC03F2A12DDCC0073BE6F /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AB4AC03F2A12DDCC0073BE6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0402A12DDF50073BE6F /* RecipeListModel.swift */,
+				AB4AC0422A12DEA10073BE6F /* RecipeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB4AC0442A12DF2C0073BE6F /* Feature Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0452A12DF360073BE6F /* Recipes Feature Interface */,
+			);
+			path = "Feature Interfaces";
+			sourceTree = "<group>";
+		};
+		AB4AC0452A12DF360073BE6F /* Recipes Feature Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0462A12DF400073BE6F /* Data */,
+			);
+			path = "Recipes Feature Interface";
+			sourceTree = "<group>";
+		};
+		AB4AC0462A12DF400073BE6F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0472A12DF440073BE6F /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AB4AC0472A12DF440073BE6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0482A12DF4B0073BE6F /* RecipeListModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB4AC04C2A12E2490073BE6F /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC04D2A12E2640073BE6F /* Repositories */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		AB4AC04D2A12E2640073BE6F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC04E2A12E2780073BE6F /* RecipeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AB4AC0502A12E3500073BE6F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC06F2A12EC7A0073BE6F /* Networking */,
+				AB4AC0512A12E3580073BE6F /* Recipe Feature */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AB4AC0512A12E3580073BE6F /* Recipe Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0522A12E39A0073BE6F /* Data Access */,
+			);
+			path = "Recipe Feature";
+			sourceTree = "<group>";
+		};
+		AB4AC0522A12E39A0073BE6F /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0532A12E3A80073BE6F /* MockRecipeRepository.swift */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		AB4AC0552A12E4700073BE6F /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0562A12E47F0073BE6F /* AssociatedKeys.swift */,
+				AB4AC0582A12E48C0073BE6F /* Invocable.swift */,
+				AB4AC05C2A12E4A30073BE6F /* Mockable.swift */,
+				AB4AC05A2A12E49A0073BE6F /* Stubbable.swift */,
+			);
+			path = Mockable;
+			sourceTree = "<group>";
+		};
+		AB4AC05E2A12E5930073BE6F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC05F2A12E59F0073BE6F /* Recipes Feature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AB4AC05F2A12E59F0073BE6F /* Recipes Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0602A12E5CB0073BE6F /* Data Access */,
+			);
+			path = "Recipes Feature";
+			sourceTree = "<group>";
+		};
+		AB4AC0602A12E5CB0073BE6F /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0642A12E6BA0073BE6F /* Data Mappings */,
+				AB4AC0612A12E5D30073BE6F /* Repositories */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		AB4AC0612A12E5D30073BE6F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0622A12E6060073BE6F /* ConcreteRecipeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AB4AC0642A12E6BA0073BE6F /* Data Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0652A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift */,
+				AB4AC0672A12E73B0073BE6F /* RecipeModel+Result.swift */,
+			);
+			path = "Data Mappings";
+			sourceTree = "<group>";
+		};
+		AB4AC0692A12EB7F0073BE6F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC06A2A12EB840073BE6F /* Recipes Feature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AB4AC06A2A12EB840073BE6F /* Recipes Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC06B2A12EB980073BE6F /* Data Access */,
+			);
+			path = "Recipes Feature";
+			sourceTree = "<group>";
+		};
+		AB4AC06B2A12EB980073BE6F /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC06C2A12EBA30073BE6F /* Repositories */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		AB4AC06C2A12EBA30073BE6F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC06D2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AB4AC06F2A12EC7A0073BE6F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0702A12EC810073BE6F /* MockNetworkingProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AB4AC0722A12EF2D0073BE6F /* XCTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0732A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift */,
+			);
+			path = XCTestCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,17 +662,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4AC0662A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift in Sources */,
 				AB4AC00F2A12C4E40073BE6F /* RequestError.swift in Sources */,
+				AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */,
 				AB4AC00D2A12C4BD0073BE6F /* ConcreteNetworkingProvider.swift in Sources */,
 				AB4ABFD72A12BFBE0073BE6F /* ViewController.swift in Sources */,
 				AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */,
 				AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */,
+				AB4AC0432A12DEA10073BE6F /* RecipeModel.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */,
+				AB4AC0412A12DDF50073BE6F /* RecipeListModel.swift in Sources */,
 				AB4AC00B2A12C4430073BE6F /* HTTPMethod.swift in Sources */,
 				AB4AC0072A12C4090073BE6F /* NetworkingProvider.swift in Sources */,
 				AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */,
+				AB4AC0682A12E73B0073BE6F /* RecipeModel+Result.swift in Sources */,
 				AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */,
+				AB4AC0632A12E6060073BE6F /* ConcreteRecipeRepository.swift in Sources */,
 				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
@@ -447,8 +693,18 @@
 				AB4AC0302A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift in Sources */,
 				AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */,
 				AB4AC0342A12D2220073BE6F /* Helper.swift in Sources */,
+				AB4AC0542A12E3A90073BE6F /* MockRecipeRepository.swift in Sources */,
 				AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */,
+				AB4AC05B2A12E49A0073BE6F /* Stubbable.swift in Sources */,
+				AB4AC0742A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift in Sources */,
+				AB4AC05D2A12E4A30073BE6F /* Mockable.swift in Sources */,
+				AB4AC04B2A12DF910073BE6F /* Helper+Models.swift in Sources */,
+				AB4AC0572A12E47F0073BE6F /* AssociatedKeys.swift in Sources */,
+				AB4AC0712A12EC810073BE6F /* MockNetworkingProvider.swift in Sources */,
 				AB4AC0382A12D2A10073BE6F /* Helper+Utils.swift in Sources */,
+				AB4AC0592A12E48C0073BE6F /* Invocable.swift in Sources */,
+				AB4AC06E2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift in Sources */,
+				AB4AC0492A12DF4B0073BE6F /* RecipeListModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
