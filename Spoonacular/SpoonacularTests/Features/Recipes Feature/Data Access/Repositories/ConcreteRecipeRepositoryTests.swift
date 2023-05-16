@@ -37,7 +37,7 @@ final class ConcreteRecipeRepositoryTests: XCTestCase {
 
         XCTAssertFalse(mockNetworkingProvider.verify([.sendRequestWithResponseModel]))
 
-        _ = try await sut.fetchRecipeList(query: "foo.query")
+        _ = try await sut.fetchRecipeList(query: "foo.query", recipesPerPage: 1111, offset: 2222)
 
         XCTAssertTrue(mockNetworkingProvider.verify([.sendRequestWithResponseModel]))
     }
@@ -45,7 +45,10 @@ final class ConcreteRecipeRepositoryTests: XCTestCase {
     func test_fetchRecipeList_whenNetworkingProviderResponseIsError_shouldReceiveError() async throws {
         mockNetworkingProvider.setStubValue(Helper.makeError(code: 400), for: .sendRequestWithResponseModel)
 
-        await XCTAssertThrowsAsyncError(try await sut.fetchRecipeList(query: "foo.query")) { error in
+        await XCTAssertThrowsAsyncError(try await sut.fetchRecipeList(query: "foo.query",
+                                                                      recipesPerPage: 1111,
+                                                                      offset: 2222)) { error in
+
             XCTAssertEqual((error as NSError).code, 400)
         }
     }

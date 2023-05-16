@@ -14,7 +14,7 @@ final class ConcreteFetchRecipeListWorker: FetchRecipeListWorker {
 
     // MARK: - Internal Methods
 
-    func execute(query: String) async throws -> RecipeListModel {
-        try await repository.fetchRecipeList(query: query)
+    func execute(query: String, recipesPerPage: Int, offset: Int) async throws -> RecipeListModel {
+        try await repository.fetchRecipeList(query: query, recipesPerPage: recipesPerPage, offset: offset)
     }
 }

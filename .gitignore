@@ -8,3 +8,5 @@ Spoonacular/Spoonacular.xcodeproj/xcuserdata/giancarlocastaneda.xcuserdatad/xcsc
 *.xcworkspacedata
 
 Spoonacular/Spoonacular.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+*.xcbkptlist

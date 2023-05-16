@@ -2,5 +2,5 @@ import Foundation
 
 public protocol RecipeRepository {
 
-    func fetchRecipeList(query: String) async throws -> RecipeListModel
+    func fetchRecipeList(query: String, recipesPerPage: Int, offset: Int) async throws -> RecipeListModel
 }
