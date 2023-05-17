@@ -77,6 +77,8 @@
 		AB64B4302A152EE300AE556D /* RecipeDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B42F2A152EE300AE556D /* RecipeDetailRoute.swift */; };
 		AB64B4332A152F2F00AE556D /* RecipeDetailSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4322A152F2F00AE556D /* RecipeDetailSceneFactory.swift */; };
 		AB64B4352A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */; };
+		AB64B43B2A15497600AE556D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43A2A15497600AE556D /* Nuke */; };
+		AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43C2A15497600AE556D /* NukeExtensions */; };
 		AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */; };
 		AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */; };
 		AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4522A14145B000AABEE /* RecipeViewModel.swift */; };
@@ -258,6 +260,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB64B43B2A15497600AE556D /* Nuke in Frameworks */,
+				AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1274,6 +1278,10 @@
 			dependencies = (
 			);
 			name = Spoonacular;
+			packageProductDependencies = (
+				AB64B43A2A15497600AE556D /* Nuke */,
+				AB64B43C2A15497600AE556D /* NukeExtensions */,
+			);
 			productName = Spoonacular;
 			productReference = AB4ABFCF2A12BFBE0073BE6F /* Spoonacular.app */;
 			productType = "com.apple.product-type.application";
@@ -1324,6 +1332,9 @@
 				Base,
 			);
 			mainGroup = AB4ABFC62A12BFBE0073BE6F;
+			packageReferences = (
+				AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = AB4ABFD02A12BFBE0073BE6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1736,6 +1747,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB64B43A2A15497600AE556D /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		AB64B43C2A15497600AE556D /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB4ABFC72A12BFBE0073BE6F /* Project object */;
 }
