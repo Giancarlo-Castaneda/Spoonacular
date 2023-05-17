@@ -11,8 +11,6 @@
 		AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */; };
 		AB4ABFDC2A12BFBF0073BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4ABFDB2A12BFBF0073BE6F /* Assets.xcassets */; };
 		AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */; };
-		AB4ABFF42A12BFBF0073BE6F /* SpoonacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFF32A12BFBF0073BE6F /* SpoonacularUITests.swift */; };
-		AB4ABFF62A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFF52A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift */; };
 		AB4AC0072A12C4090073BE6F /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0062A12C4090073BE6F /* NetworkingProvider.swift */; };
 		AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0082A12C4160073BE6F /* RequestType.swift */; };
 		AB4AC00B2A12C4430073BE6F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC00A2A12C4430073BE6F /* HTTPMethod.swift */; };
@@ -110,13 +108,6 @@
 			remoteGlobalIDString = AB4ABFCE2A12BFBE0073BE6F;
 			remoteInfo = Spoonacular;
 		};
-		AB4ABFF02A12BFBF0073BE6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB4ABFC72A12BFBE0073BE6F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB4ABFCE2A12BFBE0073BE6F;
-			remoteInfo = Spoonacular;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -127,9 +118,6 @@
 		AB4ABFE02A12BFBF0073BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4ABFE52A12BFBF0073BE6F /* SpoonacularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoonacularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularTests.swift; sourceTree = "<group>"; };
-		AB4ABFEF2A12BFBF0073BE6F /* SpoonacularUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoonacularUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB4ABFF32A12BFBF0073BE6F /* SpoonacularUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularUITests.swift; sourceTree = "<group>"; };
-		AB4ABFF52A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AB4AC0062A12C4090073BE6F /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		AB4AC0082A12C4160073BE6F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		AB4AC00A2A12C4430073BE6F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -234,13 +222,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB4ABFEC2A12BFBF0073BE6F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -249,7 +230,6 @@
 			children = (
 				AB4ABFD12A12BFBE0073BE6F /* Spoonacular */,
 				AB4ABFE82A12BFBF0073BE6F /* SpoonacularTests */,
-				AB4ABFF22A12BFBF0073BE6F /* SpoonacularUITests */,
 				AB4ABFD02A12BFBE0073BE6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -259,7 +239,6 @@
 			children = (
 				AB4ABFCF2A12BFBE0073BE6F /* Spoonacular.app */,
 				AB4ABFE52A12BFBF0073BE6F /* SpoonacularTests.xctest */,
-				AB4ABFEF2A12BFBF0073BE6F /* SpoonacularUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,15 +269,6 @@
 				AB4AC0312A12D20F0073BE6F /* Vendors */,
 			);
 			path = SpoonacularTests;
-			sourceTree = "<group>";
-		};
-		AB4ABFF22A12BFBF0073BE6F /* SpoonacularUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AB4ABFF32A12BFBF0073BE6F /* SpoonacularUITests.swift */,
-				AB4ABFF52A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift */,
-			);
-			path = SpoonacularUITests;
 			sourceTree = "<group>";
 		};
 		AB4AC0032A12C2490073BE6F /* Resources */ = {
@@ -1161,24 +1131,6 @@
 			productReference = AB4ABFE52A12BFBF0073BE6F /* SpoonacularTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB4ABFEE2A12BFBF0073BE6F /* SpoonacularUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB4ABFFF2A12BFBF0073BE6F /* Build configuration list for PBXNativeTarget "SpoonacularUITests" */;
-			buildPhases = (
-				AB4ABFEB2A12BFBF0073BE6F /* Sources */,
-				AB4ABFEC2A12BFBF0073BE6F /* Frameworks */,
-				AB4ABFED2A12BFBF0073BE6F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB4ABFF12A12BFBF0073BE6F /* PBXTargetDependency */,
-			);
-			name = SpoonacularUITests;
-			productName = SpoonacularUITests;
-			productReference = AB4ABFEF2A12BFBF0073BE6F /* SpoonacularUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1193,10 +1145,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					AB4ABFE42A12BFBF0073BE6F = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = AB4ABFCE2A12BFBE0073BE6F;
-					};
-					AB4ABFEE2A12BFBF0073BE6F = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = AB4ABFCE2A12BFBE0073BE6F;
 					};
@@ -1217,7 +1165,6 @@
 			targets = (
 				AB4ABFCE2A12BFBE0073BE6F /* Spoonacular */,
 				AB4ABFE42A12BFBF0073BE6F /* SpoonacularTests */,
-				AB4ABFEE2A12BFBF0073BE6F /* SpoonacularUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1233,13 +1180,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AB4ABFE32A12BFBF0073BE6F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB4ABFED2A12BFBF0073BE6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1352,15 +1292,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB4ABFEB2A12BFBF0073BE6F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB4ABFF62A12BFBF0073BE6F /* SpoonacularUITestsLaunchTests.swift in Sources */,
-				AB4ABFF42A12BFBF0073BE6F /* SpoonacularUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1368,11 +1299,6 @@
 			isa = PBXTargetDependency;
 			target = AB4ABFCE2A12BFBE0073BE6F /* Spoonacular */;
 			targetProxy = AB4ABFE62A12BFBF0073BE6F /* PBXContainerItemProxy */;
-		};
-		AB4ABFF12A12BFBF0073BE6F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB4ABFCE2A12BFBE0073BE6F /* Spoonacular */;
-			targetProxy = AB4ABFF02A12BFBF0073BE6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1591,42 +1517,6 @@
 			};
 			name = Release;
 		};
-		AB4AC0002A12BFBF0073BE6F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2HHD8L7L2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.gian.SpoonacularUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Spoonacular;
-			};
-			name = Debug;
-		};
-		AB4AC0012A12BFBF0073BE6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U2HHD8L7L2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.gian.SpoonacularUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Spoonacular;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1653,15 +1543,6 @@
 			buildConfigurations = (
 				AB4ABFFD2A12BFBF0073BE6F /* Debug */,
 				AB4ABFFE2A12BFBF0073BE6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB4ABFFF2A12BFBF0073BE6F /* Build configuration list for PBXNativeTarget "SpoonacularUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB4AC0002A12BFBF0073BE6F /* Debug */,
-				AB4AC0012A12BFBF0073BE6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
