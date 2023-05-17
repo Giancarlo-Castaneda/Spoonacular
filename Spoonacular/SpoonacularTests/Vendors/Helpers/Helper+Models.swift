@@ -16,4 +16,23 @@ extension Helper {
 
         .init(recipes: recipes, number: number, totalResults: totalResults)
     }
+
+    static func makeRecipeInstructionStepItemModel(id: Int = 0,
+                                                   name: String = "",
+                                                   image: String = "") -> RecipeInstructionStepItemModel {
+
+        RecipeInstructionStepItemModel(id: id, name: name, image: image)
+    }
+
+    static func makeRecipeInstructionStepModel(number: Int = 0,
+                                               description: String = "",
+                                               ingredients: [RecipeInstructionStepItemModel] = [],
+                                               equipment: [RecipeInstructionStepItemModel] = [])
+    -> RecipeInstructionStepModel {
+
+        RecipeInstructionStepModel(number: number,
+                                   description: description,
+                                   ingredients: ingredients,
+                                   equipment: equipment)
+    }
 }

@@ -23,4 +23,12 @@ final class ConcreteRecipeRepository: RecipeRepository {
 
         return RecipeListModel(dto)
     }
+
+    func fetchRecipeDetail(id: String) async throws -> RecipeInformationModel {
+        let endpoint = SpoonacularAPI.recipesInformationGET(id: id)
+        let dto = try await networkingProvider.sendRequest(endpoint: endpoint,
+                                                           responseModel: RecipesInformationDTO.self)
+
+        return RecipeInformationModel(dto)
+    }
 }
