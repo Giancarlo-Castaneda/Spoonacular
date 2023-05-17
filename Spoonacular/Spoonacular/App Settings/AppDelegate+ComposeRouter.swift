@@ -8,5 +8,7 @@ extension AppDelegate {
         let routeService = appDependency.routeService
 
         routeService.register(ConcreteRecipesListSceneRouteHandler(recipeRepository: appDependency.recipe.recipeRepository))
+
+        routeService.register(ConcreteRecipeDetailSceneRouteHandler(recipeRepository: appDependency.recipe.recipeRepository))
     }
 }

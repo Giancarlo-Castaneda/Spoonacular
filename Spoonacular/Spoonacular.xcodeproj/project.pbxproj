@@ -73,6 +73,10 @@
 		AB64B4212A15233400AE556D /* ConcreteRecipeDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4202A15233400AE556D /* ConcreteRecipeDetailInteractor.swift */; };
 		AB64B4252A15242900AE556D /* RecipeDetailPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4242A15242900AE556D /* RecipeDetailPresenterOutput.swift */; };
 		AB64B4292A1524DB00AE556D /* ConcreteRecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4282A1524DB00AE556D /* ConcreteRecipeDetailPresenter.swift */; };
+		AB64B42D2A1526AB00AE556D /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B42C2A1526AB00AE556D /* RecipeDetailViewController.swift */; };
+		AB64B4302A152EE300AE556D /* RecipeDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B42F2A152EE300AE556D /* RecipeDetailRoute.swift */; };
+		AB64B4332A152F2F00AE556D /* RecipeDetailSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4322A152F2F00AE556D /* RecipeDetailSceneFactory.swift */; };
+		AB64B4352A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */; };
 		AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */; };
 		AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */; };
 		AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4522A14145B000AABEE /* RecipeViewModel.swift */; };
@@ -199,6 +203,10 @@
 		AB64B4202A15233400AE556D /* ConcreteRecipeDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeDetailInteractor.swift; sourceTree = "<group>"; };
 		AB64B4242A15242900AE556D /* RecipeDetailPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenterOutput.swift; sourceTree = "<group>"; };
 		AB64B4282A1524DB00AE556D /* ConcreteRecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeDetailPresenter.swift; sourceTree = "<group>"; };
+		AB64B42C2A1526AB00AE556D /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		AB64B42F2A152EE300AE556D /* RecipeDetailRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailRoute.swift; sourceTree = "<group>"; };
+		AB64B4322A152F2F00AE556D /* RecipeDetailSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailSceneFactory.swift; sourceTree = "<group>"; };
+		AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeDetailSceneRouteHandler.swift; sourceTree = "<group>"; };
 		AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesListPresenter.swift; sourceTree = "<group>"; };
 		AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListPresenterOutput.swift; sourceTree = "<group>"; };
 		AB98A4522A14145B000AABEE /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
@@ -755,9 +763,9 @@
 		AB4AC08F2A12FE390073BE6F /* Recipe List Scene */ = {
 			isa = PBXGroup;
 			children = (
-				AB98A4BC2A1488FF000AABEE /* Router */,
 				AB4AC08B2A12FE100073BE6F /* Business Logic */,
 				AB98A44D2A13FBC1000AABEE /* Presentation Logic */,
+				AB98A4BC2A1488FF000AABEE /* Router */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -859,8 +867,9 @@
 		AB64B4182A1522A200AE556D /* Recipe Detail Scene */ = {
 			isa = PBXGroup;
 			children = (
-				AB64B4222A1523E200AE556D /* Presentation Logic */,
 				AB64B4192A1522B600AE556D /* Business Logic */,
+				AB64B4222A1523E200AE556D /* Presentation Logic */,
+				AB64B42E2A152ECB00AE556D /* Router */,
 			);
 			path = "Recipe Detail Scene";
 			sourceTree = "<group>";
@@ -884,8 +893,10 @@
 		AB64B41D2A15231800AE556D /* Recipe Detail Scene */ = {
 			isa = PBXGroup;
 			children = (
-				AB64B4262A1524C000AE556D /* Presentation Logic */,
 				AB64B41E2A15232600AE556D /* Business Logic */,
+				AB64B4262A1524C000AE556D /* Presentation Logic */,
+				AB64B4312A152F1600AE556D /* Router */,
+				AB64B42A2A15269500AE556D /* User Interface */,
 			);
 			path = "Recipe Detail Scene";
 			sourceTree = "<group>";
@@ -936,6 +947,39 @@
 				AB64B4282A1524DB00AE556D /* ConcreteRecipeDetailPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AB64B42A2A15269500AE556D /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AB64B42B2A15269A00AE556D /* Controllers */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		AB64B42B2A15269A00AE556D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB64B42C2A1526AB00AE556D /* RecipeDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB64B42E2A152ECB00AE556D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB64B42F2A152EE300AE556D /* RecipeDetailRoute.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AB64B4312A152F1600AE556D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */,
+				AB64B4322A152F2F00AE556D /* RecipeDetailSceneFactory.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		AB98A4492A13FB1C000AABEE /* Presentation Logic */ = {
@@ -1325,6 +1369,7 @@
 				AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */,
 				AB98A4B92A148639000AABEE /* AppDependency+Recipe.swift in Sources */,
 				AB4AC00D2A12C4BD0073BE6F /* ConcreteNetworkingProvider.swift in Sources */,
+				AB64B4352A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift in Sources */,
 				AB64B4012A14AEF100AE556D /* RecipeInstructionStepModel.swift in Sources */,
 				AB98A4882A146AB0000AABEE /* LayoutDSL.swift in Sources */,
 				AB98A4972A146B6A000AABEE /* Composable.swift in Sources */,
@@ -1347,6 +1392,7 @@
 				AB98A47C2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */,
+				AB64B4332A152F2F00AE556D /* RecipeDetailSceneFactory.swift in Sources */,
 				AB98A4AB2A1484D4000AABEE /* Route.swift in Sources */,
 				AB64B40B2A151D6700AE556D /* RecipeInstructionStepItemModel+StepItemDTO.swift in Sources */,
 				AB64B3FD2A14AD3900AE556D /* RecipeIngredientModel.swift in Sources */,
@@ -1357,6 +1403,7 @@
 				AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */,
 				AB4AC0682A12E73B0073BE6F /* RecipeModel+Result.swift in Sources */,
 				AB4AC08E2A12FE2E0073BE6F /* RecipeListInteractor.swift in Sources */,
+				AB64B42D2A1526AB00AE556D /* RecipeDetailViewController.swift in Sources */,
 				AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */,
 				AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */,
 				AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */,
@@ -1365,6 +1412,7 @@
 				AB4AC0632A12E6060073BE6F /* ConcreteRecipeRepository.swift in Sources */,
 				AB4AC09A2A1301690073BE6F /* ConcreteRecipeListInteractor.swift in Sources */,
 				AB64B41C2A1522D600AE556D /* RecipeDetailInteractor.swift in Sources */,
+				AB64B4302A152EE300AE556D /* RecipeDetailRoute.swift in Sources */,
 				AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */,
 				AB64B4252A15242900AE556D /* RecipeDetailPresenterOutput.swift in Sources */,
 				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
