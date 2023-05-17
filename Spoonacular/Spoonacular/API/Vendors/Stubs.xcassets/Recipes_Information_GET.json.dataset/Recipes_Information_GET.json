@@ -8,100 +8,97 @@
     "veryPopular": false,
     "extendedIngredients": [
         {
-            "id": 11114,
-            "image": "savoy-cabbage.jpg",
-            "consistency": "SOLID",
-            "name": "savoy cabbage",
-            "nameClean": "savoy cabbage",
-            "original": "1/2 savoy cabbage",
-            "originalName": "savoy cabbage",
-            "amount": 0.5,
-            "unit": ""
+            "id": 1111,
+            "image": "foo.extendedIngredients.0.image",
+            "consistency": "foo.extendedIngredients.0.consistency",
+            "name": "foo.extendedIngredients.0.name",
+            "nameClean": "foo.extendedIngredients.0.nameClean",
+            "original": "foo.extendedIngredients.0.original",
+            "originalName": "foo.extendedIngredients.0.originalName",
+            "amount": 0.11,
+            "unit": "foo.extendedIngredients.0.unit"
         },
         {
-            "id": 12155,
-            "image": "walnuts.jpg",
-            "consistency": "SOLID",
-            "name": "walnuts",
-            "nameClean": "walnuts",
-            "original": "50 grams walnuts, toasted",
-            "originalName": "walnuts, toasted",
-            "amount": 50.0,
-            "unit": "grams"
+            "id": 2222,
+            "image": "foo.extendedIngredients.1.image",
+            "consistency": "foo.extendedIngredients.1.consistency",
+            "name": "foo.extendedIngredients.1.name",
+            "nameClean": "foo.extendedIngredients.1.nameClean",
+            "original": "foo.extendedIngredients.1.original",
+            "originalName": "foo.extendedIngredients.1.originalName",
+            "amount": 0.22,
+            "unit": "foo.extendedIngredients.1.unit"
         }
     ],
-    "id": 452116,
-    "title": "Rustic Red Wine Spaghetti",
-    "readyInMinutes": 40,
-    "servings": 2,
-    "image": "https://spoonacular.com/recipeImages/452116-556x370.jpg",
+    "id": 3333,
+    "title": "foo.title",
+    "readyInMinutes": 4444,
+    "servings": 5555,
+    "image": "foo.com/images.jpg",
     "imageType": "jpg",
-    "summary": "Rustic Red Wine Spaghetti might be just the main course you are searching for. This recipe makes 2 servings with <b>855 calories</b>, <b>35g of protein</b>, and <b>40g of fat</b> each. For <b>$3.38 per serving</b>, this recipe <b>covers 47%</b> of your daily requirements of vitamins and minerals. From preparation to the plate, this recipe takes roughly <b>40 minutes</b>. If you have red wine, salt and pepper, mushrooms, and a few other ingredients on hand, you can make it. It is brought to you by spoonacular user <a href=\"/profile/coffeebean\">coffeebean</a>. Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/rustic-red-wine-spaghetti-1220613\">Rustic Red Wine Spaghetti</a>, <a href=\"https://spoonacular.com/recipes/rustic-red-wine-spaghetti-1356919\">Rustic Red Wine Spaghetti</a>, and <a href=\"https://spoonacular.com/recipes/rustic-chicken-stew-with-tomatoes-olives-and-red-wine-202260\">Rustic Chicken Stew with Tomatoes, Olives, and Red Wine</a>.",
+    "summary": "foo.summary",
     "dishTypes": [
-        "side dish",
-        "lunch",
-        "main course",
-        "main dish",
-        "dinner"
+        "foo.0.dish_types",
+        "foo.1.dish_types"
     ],
     "diets": [
-        "gluten free",
-        "lacto ovo vegetarian"
+        "foo.0.diets",
+        "foo.1.diets"
     ],
-    "instructions": "<p>     1. In a small skillet, fry the garlic in olive oil until fragrant. Add the mushrooms. When the mushrooms are almost done, add the fresh rosemary, be careful not to let it burn.</p><p>     2. In a large skillet, fry the chopped savoy cabbage until the desired level of crispiness is achieved.</p><p>     2. Once the cabbage is nearly done, pour half of the bottle of wine into a pot. Dilute with boiling water until you have enough to cook the pasta in (but try not to dilute it too much). Bring to a boil and salt the water.</p><p>     3. Add the spaghetti.</p><p>     4. Drain the pasta, reserving about 1/4 cup of the pasta water.</p><p>     5. Add the pasta to the skillet with the cabbage. Add the mushrooms and rosemary (you might want to de-glaze the pan they were in with some more wine). Add the reserved wine/water mixture to the pan with the pasta and cabbage. Season with salt and pepper. Add olive oil if it's too dry, and don't forget plenty of Parmesan.</p>",
+    "instructions": "foo.instructions",
     "analyzedInstructions": [
         {
-            "name": "",
+            "name": "foo.analyzedInstructions.0.name",
             "steps": [
                 {
-                    "number": 1,
-                    "step": "In a small skillet, fry the garlic in olive oil until fragrant.",
+                    "number": 6666,
+                    "step": "foo.analyzedInstructions.0.steps.0.step",
                     "ingredients": [
                         {
-                            "id": 4053,
-                            "name": "olive oil",
-                            "localizedName": "olive oil",
-                            "image": "olive-oil.jpg"
+                            "id": 7777,
+                            "name": "foo.analyzedInstructions.0.steps.0.ingredients.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.0.ingredients.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.0.ingredients.0.image"
                         }
                     ],
                     "equipment": [
                         {
-                            "id": 404645,
-                            "name": "frying pan",
-                            "localizedName": "frying pan",
-                            "image": "pan.png"
+                            "id": 8888,
+                            "name": "foo.analyzedInstructions.0.steps.0.equipment.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.0.equipment.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.0.equipment.0.image"
                         }
                     ]
                 },
                 {
-                    "number": 2,
-                    "step": "Add the mushrooms. When the mushrooms are almost done, add the fresh rosemary, be careful not to let it burn.",
+                    "number": 9999,
+                    "step": "foo.analyzedInstructions.0.steps.1.step",
                     "ingredients": [
                         {
-                            "id": 2063,
-                            "name": "fresh rosemary",
-                            "localizedName": "fresh rosemary",
-                            "image": "rosemary.jpg"
+                            "id": 1111,
+                            "name": "foo.analyzedInstructions.0.steps.1.ingredients.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.ingredients.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.ingredients.0.image"
                         },
                         {
-                            "id": 11260,
-                            "name": "mushrooms",
-                            "localizedName": "mushrooms",
-                            "image": "mushrooms.png"
+                            "id": 2222,
+                            "name": "foo.analyzedInstructions.0.steps.1.ingredients.1.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.ingredients.1.name",
+                            "image": "foo.analyzedInstructions.0.steps.1.ingredients.1.name"
                         }
                     ],
                     "equipment": [
                         {
-                            "id": 404645,
-                            "name": "frying pan",
-                            "localizedName": "frying pan",
-                            "image": "pan.png"
+                            "id": 3333,
+                            "name": "foo.analyzedInstructions.0.steps.1.equipment.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.equipment.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.equipment.0.image"
                         },
                         {
-                            "id": 404645,
-                            "name": "frying pan",
-                            "localizedName": "frying pan",
-                            "image": "pan.png"
+                            "id": 4444,
+                            "name": "foo.analyzedInstructions.0.steps.1.equipment.1.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.equipment.1.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.equipment.1.image"
                         }
                     ]
                 }
