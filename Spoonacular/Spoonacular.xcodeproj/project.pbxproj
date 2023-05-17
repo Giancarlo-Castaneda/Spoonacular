@@ -99,7 +99,7 @@
 		AB98A4BE2A148909000AABEE /* RecipesListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4BD2A148909000AABEE /* RecipesListRoute.swift */; };
 		AB98A4C02A148961000AABEE /* AppDelegate+ComposeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4BF2A148961000AABEE /* AppDelegate+ComposeRouter.swift */; };
 		AB98A4C72A149700000AABEE /* RecipesInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4C62A149700000AABEE /* RecipesInformationDTO.swift */; };
-		AB98A4C92A149CF3000AABEE /* RecipesInformationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */; };
+		AB98A4E12A14A47E000AABEE /* RecipesInformationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4E02A14A47E000AABEE /* RecipesInformationDTOTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,7 +216,7 @@
 		AB98A4BD2A148909000AABEE /* RecipesListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListRoute.swift; sourceTree = "<group>"; };
 		AB98A4BF2A148961000AABEE /* AppDelegate+ComposeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ComposeRouter.swift"; sourceTree = "<group>"; };
 		AB98A4C62A149700000AABEE /* RecipesInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInformationDTO.swift; sourceTree = "<group>"; };
-		AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInformationDTOTests.swift; sourceTree = "<group>"; };
+		AB98A4E02A14A47E000AABEE /* RecipesInformationDTOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInformationDTOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,7 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC02F2A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift */,
-				AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */,
+				AB98A4E02A14A47E000AABEE /* RecipesInformationDTOTests.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -1328,7 +1328,6 @@
 				AB4AC0542A12E3A90073BE6F /* MockRecipeRepository.swift in Sources */,
 				AB98A4762A146218000AABEE /* MockRecipeListDataProvider.swift in Sources */,
 				AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */,
-				AB98A4C92A149CF3000AABEE /* RecipesInformationDTOTests.swift in Sources */,
 				AB98A47A2A14655B000AABEE /* MockRecipeViewModelFactory.swift in Sources */,
 				AB6197932A133B9800949996 /* ConcreteRecipeListInteractorTests.swift in Sources */,
 				AB98A4732A145C63000AABEE /* MockRecipesListPresenterOutput.swift in Sources */,
@@ -1337,6 +1336,7 @@
 				AB4AC05D2A12E4A30073BE6F /* Mockable.swift in Sources */,
 				AB4AC07F2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift in Sources */,
 				AB4AC04B2A12DF910073BE6F /* Helper+Models.swift in Sources */,
+				AB98A4E12A14A47E000AABEE /* RecipesInformationDTOTests.swift in Sources */,
 				AB98A4702A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift in Sources */,
 				AB98A45A2A141661000AABEE /* ConcreteRecipeViewModelTests.swift in Sources */,
 				AB4AC0572A12E47F0073BE6F /* AssociatedKeys.swift in Sources */,
