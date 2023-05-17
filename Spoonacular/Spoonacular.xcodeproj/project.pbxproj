@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFD22A12BFBE0073BE6F /* AppDelegate.swift */; };
 		AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */; };
-		AB4ABFD72A12BFBE0073BE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */; };
 		AB4ABFDC2A12BFBF0073BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4ABFDB2A12BFBF0073BE6F /* Assets.xcassets */; };
 		AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFE92A12BFBF0073BE6F /* SpoonacularTests.swift */; };
 		AB4ABFF42A12BFBF0073BE6F /* SpoonacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4ABFF32A12BFBF0073BE6F /* SpoonacularUITests.swift */; };
@@ -83,6 +82,11 @@
 		AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4912A146AEC000AABEE /* NSLayoutConstraint.swift */; };
 		AB98A4942A146AF5000AABEE /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4932A146AF5000AABEE /* UIView+layout.swift */; };
 		AB98A4972A146B6A000AABEE /* Composable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4962A146B6A000AABEE /* Composable.swift */; };
+		AB98A49B2A146BD9000AABEE /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A49A2A146BD9000AABEE /* RecipeListViewController.swift */; };
+		AB98A49E2A146FDE000AABEE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A49D2A146FDE000AABEE /* Reusable.swift */; };
+		AB98A4A02A146FE6000AABEE /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A49F2A146FE6000AABEE /* UITableView+Reusable.swift */; };
+		AB98A4A22A147014000AABEE /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4A12A147014000AABEE /* UITableViewCell+Reusable.swift */; };
+		AB98A4A52A1472FB000AABEE /* RecipesListSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4A42A1472FB000AABEE /* RecipesListSceneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +110,6 @@
 		AB4ABFCF2A12BFBE0073BE6F /* Spoonacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spoonacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4ABFD22A12BFBE0073BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB4ABFDB2A12BFBF0073BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4ABFE02A12BFBF0073BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4ABFE52A12BFBF0073BE6F /* SpoonacularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoonacularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +186,11 @@
 		AB98A4912A146AEC000AABEE /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		AB98A4932A146AF5000AABEE /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
 		AB98A4962A146B6A000AABEE /* Composable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composable.swift; sourceTree = "<group>"; };
+		AB98A49A2A146BD9000AABEE /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeListViewController.swift; path = Spoonacular/Utils/Composable/RecipeListViewController.swift; sourceTree = SOURCE_ROOT; };
+		AB98A49D2A146FDE000AABEE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		AB98A49F2A146FE6000AABEE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		AB98A4A12A147014000AABEE /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		AB98A4A42A1472FB000AABEE /* RecipesListSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListSceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +241,6 @@
 		AB4ABFD12A12BFBE0073BE6F /* Spoonacular */ = {
 			isa = PBXGroup;
 			children = (
-				AB4ABFD62A12BFBE0073BE6F /* ViewController.swift */,
 				AB4AC01F2A12CA480073BE6F /* API */,
 				AB4AC0042A12C28B0073BE6F /* App Delegate */,
 				AB4AC0192A12C8980073BE6F /* Feature Interfaces */,
@@ -300,6 +307,7 @@
 		AB4AC0102A12C5200073BE6F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AB98A49C2A146FD3000AABEE /* Reusable */,
 				AB98A4952A146B65000AABEE /* Composable */,
 				AB98A4862A146A90000AABEE /* ConstraintsKit */,
 				AB4AC0142A12C5440073BE6F /* Extensions */,
@@ -751,6 +759,8 @@
 			children = (
 				AB4AC0972A13015A0073BE6F /* Business Logic */,
 				AB98A4492A13FB1C000AABEE /* Presentation Logic */,
+				AB98A4A32A1472E2000AABEE /* Router */,
+				AB98A4982A146BC2000AABEE /* User Interface */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -1000,6 +1010,40 @@
 			path = Composable;
 			sourceTree = "<group>";
 		};
+		AB98A4982A146BC2000AABEE /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4992A146BCB000AABEE /* Controllers */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		AB98A4992A146BCB000AABEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A49A2A146BD9000AABEE /* RecipeListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB98A49C2A146FD3000AABEE /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A49D2A146FDE000AABEE /* Reusable.swift */,
+				AB98A49F2A146FE6000AABEE /* UITableView+Reusable.swift */,
+				AB98A4A12A147014000AABEE /* UITableViewCell+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		AB98A4A32A1472E2000AABEE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4A42A1472FB000AABEE /* RecipesListSceneFactory.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1134,12 +1178,12 @@
 				AB4AC0662A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift in Sources */,
 				AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */,
 				AB98A4942A146AF5000AABEE /* UIView+layout.swift in Sources */,
+				AB98A4A02A146FE6000AABEE /* UITableView+Reusable.swift in Sources */,
 				AB4AC00F2A12C4E40073BE6F /* RequestError.swift in Sources */,
 				AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */,
 				AB4AC00D2A12C4BD0073BE6F /* ConcreteNetworkingProvider.swift in Sources */,
 				AB98A4882A146AB0000AABEE /* LayoutDSL.swift in Sources */,
 				AB98A4972A146B6A000AABEE /* Composable.swift in Sources */,
-				AB4ABFD72A12BFBE0073BE6F /* ViewController.swift in Sources */,
 				AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */,
 				AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */,
 				AB4AC0432A12DEA10073BE6F /* RecipeModel.swift in Sources */,
@@ -1147,9 +1191,11 @@
 				AB98A4672A142082000AABEE /* RecipesDataProviderFactory.swift in Sources */,
 				AB98A4902A146AE2000AABEE /* LayoutDSL+VerticalAnchor.swift in Sources */,
 				AB98A4612A141819000AABEE /* ConcreteRecipeListDataProvider.swift in Sources */,
+				AB98A4A52A1472FB000AABEE /* RecipesListSceneFactory.swift in Sources */,
 				AB98A47C2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */,
+				AB98A49E2A146FDE000AABEE /* Reusable.swift in Sources */,
 				AB4AC0412A12DDF50073BE6F /* RecipeListModel.swift in Sources */,
 				AB4AC00B2A12C4430073BE6F /* HTTPMethod.swift in Sources */,
 				AB4AC0072A12C4090073BE6F /* NetworkingProvider.swift in Sources */,
@@ -1167,8 +1213,10 @@
 				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
 				AB4AC07B2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
+				AB98A49B2A146BD9000AABEE /* RecipeListViewController.swift in Sources */,
 				AB98A48E2A146AD8000AABEE /* LayoutDSL+HorizontalAnchor.swift in Sources */,
 				AB98A46D2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift in Sources */,
+				AB98A4A22A147014000AABEE /* UITableViewCell+Reusable.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
 				AB98A48A2A146AC4000AABEE /* LayoutDSL+AbsoluteHorizontalAnchor.swift in Sources */,
 				AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */,
