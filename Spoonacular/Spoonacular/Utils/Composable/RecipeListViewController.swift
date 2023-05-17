@@ -15,6 +15,7 @@ final class RecipeListViewController: UIViewController {
     // MARK: - Private Properties
 
     private var dataProvider: RecipeListDataProvider?
+    private var query = ""
 
     // MARK: - Internal Properties
 
@@ -38,7 +39,7 @@ final class RecipeListViewController: UIViewController {
 
         setupUI()
         setupContraints()
-        interactor?.fetchRecipes(query: "")
+        interactor?.fetchRecipes(query: query)
     }
 
     // MARK: - Private Methods
@@ -116,6 +117,15 @@ extension RecipeListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension RecipeListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let offSetY = self.tableView.contentOffset.y
+        let contentHeight = self.tableView.contentSize.height
+
+        if offSetY > (contentHeight - self.tableView.frame.size.height - 100) {
+            interactor?.fetchRecipes(query: query)
+        }
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

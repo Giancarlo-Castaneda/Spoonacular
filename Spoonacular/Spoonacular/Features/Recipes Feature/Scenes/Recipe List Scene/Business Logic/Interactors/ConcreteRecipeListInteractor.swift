@@ -46,7 +46,7 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
 
                 showedItems.append(contentsOf: recipeList.recipes)
                 total = recipeList.totalResults
-                offset += showedItems.count
+                offset = showedItems.count
 
                 await presenter?.fetchedRecipes(recipes: showedItems)
                 isPaginationRequestStillResume = false
