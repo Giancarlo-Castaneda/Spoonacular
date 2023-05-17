@@ -1,12 +1,12 @@
+import Nuke
+import NukeExtensions
 import UIKit
 
 final class RecipeDetailViewController: UIViewController {
 
     // MARK: - View Components
 
-    private lazy var imageView = UIImageView().with {
-        $0.backgroundColor = .red
-    }
+    private lazy var imageView = UIImageView()
     private lazy var nameLabel = UILabel().with {
         $0.numberOfLines = 2
         $0.textAlignment = .center
@@ -77,6 +77,18 @@ final class RecipeDetailViewController: UIViewController {
 
         present(alert, animated: true)
     }
+
+    private func loadImage(url: URL) {
+        let request = ImageRequest(url: url)
+
+        var options = ImageLoadingOptions(transition: .fadeIn(duration: 0.5))
+        options.placeholder = .init(systemName: "fork.knife")
+        options.contentModes = .init(success: .scaleAspectFill,
+                                     failure: .scaleAspectFill,
+                                     placeholder: .scaleAspectFit)
+
+        NukeExtensions.loadImage(with: request, options: options, into: imageView)
+    }
 }
 
 // MARK: - RecipeDetailPresenterOutput
@@ -86,6 +98,7 @@ extension RecipeDetailViewController: RecipeDetailPresenterOutput {
     func configure(state: RecipeDetailViewState) {
         switch state {
         case let .content(recipe):
+            loadImage(url: recipe.image)
             nameLabel.text = recipe.title
             instructionsLabel.text = recipe.instructions
 
