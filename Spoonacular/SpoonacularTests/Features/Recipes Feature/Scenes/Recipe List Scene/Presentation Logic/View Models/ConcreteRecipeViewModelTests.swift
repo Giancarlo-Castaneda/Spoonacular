@@ -29,8 +29,9 @@ final class ConcreteRecipeViewModelTests: XCTestCase {
     func test_initGivenValues_shouldSetValues() throws {
         let url = try XCTUnwrap(URL(string: "foo.com"))
 
-        sut = SUT(title: "foo.title", image: url)
+        sut = SUT(id: 1111, title: "foo.title", image: url)
 
+        XCTAssertEqual(sut.id, 1111)
         XCTAssertEqual(sut.title, "foo.title")
         XCTAssertEqual(sut.image.absoluteString, "foo.com")
     }

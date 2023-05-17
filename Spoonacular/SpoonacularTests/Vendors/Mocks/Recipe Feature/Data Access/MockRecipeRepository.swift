@@ -7,6 +7,7 @@ final class MockRecipeRepository: RecipeRepository, Mockable {
 
     enum Invocation {
         case fetchRecipeList
+        case fetchRecipeDetail
     }
 
     // MARK: - Internal Properties
@@ -14,6 +15,7 @@ final class MockRecipeRepository: RecipeRepository, Mockable {
     var receivedQuery: String?
     var receivedRecipesPerPage: Int?
     var receivedOffset: Int?
+    var receivedId: String?
 
     // MARK: - Internal Methods
 
@@ -29,5 +31,17 @@ final class MockRecipeRepository: RecipeRepository, Mockable {
         }
 
         return getStubValue(for: .fetchRecipeList)
+    }
+
+    func fetchRecipeDetail(id: String) async throws -> RecipeInformationModel {
+        append(.fetchRecipeDetail)
+
+        receivedId = id
+
+        if let error: Error = getStubOptionalValue(for: .fetchRecipeDetail) {
+            throw error
+        }
+
+        return getStubValue(for: .fetchRecipeDetail)
     }
 }

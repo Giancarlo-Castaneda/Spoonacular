@@ -9,14 +9,16 @@ final class MockRecipeViewModelFactory: RecipeViewModelFactory, Mockable {
         case makeRecipeViewModel
     }
 
-    private var receivedTitle: String?
-    private var receivedImage: URL?
+    var receivedId: Int?
+    var receivedTitle: String?
+    var receivedImage: URL?
 
     // MARK: - Internal Methods
 
-    func makeRecipeViewModel(title: String, image: URL) -> RecipeViewModel {
+    func makeRecipeViewModel(id: Int, title: String, image: URL) -> RecipeViewModel {
         append(.makeRecipeViewModel)
 
+        receivedId = id
         receivedTitle = title
         receivedImage = image
 
