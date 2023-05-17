@@ -10,12 +10,21 @@ final class AppRouter {
     // MARK: - Internal Methods
 
     func start() {
-        let networkingProvider = ConcreteNetworkingProvider(jsonDecoder: JSONDecoder())
-        let recipeRepository = ConcreteRecipeRepository(networkingProvider: networkingProvider)
-        let vc = RecipesListSceneFactory(recipeRepository: recipeRepository).build()
-        let navigationController = UINavigationController(rootViewController: vc)
+        guard
+            let rootViewController = window?.rootViewController
+        else {
+            let navigationController = UINavigationController(nibName: nil, bundle: nil)
 
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            appDependency.routeService.navigate(to: RecipesListRoute(),
+                                                from: navigationController,
+                                                presentationStyle: .currentContext)
+            return
+        }
+
+        appDependency.routeService.navigate(to: RecipesListRoute(),
+                                            from: rootViewController,
+                                            presentationStyle: .currentContext)
     }
 }
