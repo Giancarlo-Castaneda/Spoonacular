@@ -16,6 +16,7 @@ final class RecipeListViewController: UIViewController {
 
     private var dataProvider: RecipeListDataProvider?
     private var query = ""
+    private let routeService: RouteService
 
     // MARK: - Internal Properties
 
@@ -23,7 +24,9 @@ final class RecipeListViewController: UIViewController {
 
     // MARK: - Initialization
 
-    init() {
+    init(routeService: RouteService) {
+        self.routeService = routeService
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -129,5 +132,13 @@ extension RecipeListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        guard
+            let viewModel = dataProvider?.viewModel(at: indexPath)
+        else { fatalError("Undefined view model for indexPath \(indexPath)") }
+
+        routeService.navigate(to: RecipeDetailRoute(id: viewModel.id.description),
+                              from: self,
+                              presentationStyle: .currentContext)
     }
 }

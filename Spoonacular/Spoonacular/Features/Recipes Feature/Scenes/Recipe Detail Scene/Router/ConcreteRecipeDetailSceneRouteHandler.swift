@@ -15,7 +15,7 @@ final class ConcreteRecipeDetailSceneRouteHandler: RouteHandler {
     // MARK: - Internal Methods
 
     func destination(of route: RecipeDetailRoute) -> UIViewController {
-        RecipesListSceneFactory(recipeRepository: recipeRepository).build()
+        RecipeDetailSceneFactory(recipeId: route.id, recipeRepository: recipeRepository).build()
     }
 
     func navigate(to route: RecipeDetailRoute,

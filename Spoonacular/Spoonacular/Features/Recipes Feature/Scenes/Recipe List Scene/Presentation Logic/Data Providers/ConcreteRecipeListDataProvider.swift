@@ -18,7 +18,7 @@ final class ConcreteRecipeListDataProvider: RecipeListDataProvider {
     // MARK: - Private Methods
 
     private func generateSections() -> [RecipeViewModel] {
-        recipes.map { viewModelFactory.makeRecipeViewModel(title: $0.title, image: $0.image) }
+        recipes.map { viewModelFactory.makeRecipeViewModel(id: $0.id,title: $0.title, image: $0.image) }
     }
 
     // MARK: - Internal Methods
