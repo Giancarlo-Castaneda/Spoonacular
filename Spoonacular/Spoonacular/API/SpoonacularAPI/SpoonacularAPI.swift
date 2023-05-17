@@ -22,6 +22,7 @@ struct SpoonacularAPI: RequestType {
     // MARK: - Private Methods
 
     mutating private func addApiKey() {
-        self.queryItems?.append(URLQueryItem(name: "apiKey", value: "d612a30d4ab847bba45509dd28e49950"))
+        if queryItems == nil { queryItems = [] }
+        queryItems?.append(URLQueryItem(name: "apiKey", value: "d612a30d4ab847bba45509dd28e49950"))
     }
 }
