@@ -6,7 +6,7 @@ public protocol RecipeDetailPresenterOutput: AnyObject {
 }
 
 public enum RecipeDetailViewState {
-    case content
+    case content(recipe: RecipeInformationModel)
     case failure(title: String, message: String)
     case loading
 }

@@ -9,7 +9,7 @@ final class ConcreteRecipeDetailPresenter: RecipeDetailInteractorOutput {
     // MARK: - Internal Methods
 
     func fetchedRecipeDetail(detail: RecipeInformationModel) async {
-        await view?.configure(state: .content)
+        await view?.configure(state: .content(recipe: detail))
     }
 
     func loading() async {
