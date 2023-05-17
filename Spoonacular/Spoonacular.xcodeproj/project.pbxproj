@@ -79,6 +79,8 @@
 		AB64B4352A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */; };
 		AB64B43B2A15497600AE556D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43A2A15497600AE556D /* Nuke */; };
 		AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43C2A15497600AE556D /* NukeExtensions */; };
+		AB64B4402A157C9B00AE556D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43F2A157C9B00AE556D /* Realm */; };
+		AB64B4422A157C9B00AE556D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B4412A157C9B00AE556D /* RealmSwift */; };
 		AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */; };
 		AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */; };
 		AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4522A14145B000AABEE /* RecipeViewModel.swift */; };
@@ -260,6 +262,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB64B4422A157C9B00AE556D /* RealmSwift in Frameworks */,
+				AB64B4402A157C9B00AE556D /* Realm in Frameworks */,
 				AB64B43B2A15497600AE556D /* Nuke in Frameworks */,
 				AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */,
 			);
@@ -1281,6 +1285,8 @@
 			packageProductDependencies = (
 				AB64B43A2A15497600AE556D /* Nuke */,
 				AB64B43C2A15497600AE556D /* NukeExtensions */,
+				AB64B43F2A157C9B00AE556D /* Realm */,
+				AB64B4412A157C9B00AE556D /* RealmSwift */,
 			);
 			productName = Spoonacular;
 			productReference = AB4ABFCF2A12BFBE0073BE6F /* Spoonacular.app */;
@@ -1334,6 +1340,7 @@
 			mainGroup = AB4ABFC62A12BFBE0073BE6F;
 			packageReferences = (
 				AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */,
+				AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = AB4ABFD02A12BFBE0073BE6F /* Products */;
 			projectDirPath = "";
@@ -1757,6 +1764,14 @@
 				minimumVersion = 12.0.0;
 			};
 		};
+		AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1769,6 +1784,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
+		};
+		AB64B43F2A157C9B00AE556D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		AB64B4412A157C9B00AE556D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
