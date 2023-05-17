@@ -31,6 +31,13 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
                     !isPaginationRequestStillResume
                 else { return }
 
+                if previousQuery != query {
+                    offset = 0
+                    total = 0
+                    showedItems.removeAll()
+                }
+                previousQuery = query
+
                 guard
                     (offset == 0 && total == 0) || offset < total
                 else {
@@ -38,11 +45,7 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
                     return
                 }
 
-                if previousQuery != query {
-                    offset = 0
-                }
                 isPaginationRequestStillResume = true
-                previousQuery = query
 
                 await presenter?.loading()
 
