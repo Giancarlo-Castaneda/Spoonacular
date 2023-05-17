@@ -57,6 +57,24 @@
 		AB4AC0942A12FFD20073BE6F /* MockRecipeListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0932A12FFD20073BE6F /* MockRecipeListInteractorOutput.swift */; };
 		AB4AC09A2A1301690073BE6F /* ConcreteRecipeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4AC0992A1301690073BE6F /* ConcreteRecipeListInteractor.swift */; };
 		AB6197932A133B9800949996 /* ConcreteRecipeListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6197922A133B9800949996 /* ConcreteRecipeListInteractorTests.swift */; };
+		AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */; };
+		AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */; };
+		AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4522A14145B000AABEE /* RecipeViewModel.swift */; };
+		AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4552A141602000AABEE /* ConcreteRecipeViewModel.swift */; };
+		AB98A45A2A141661000AABEE /* ConcreteRecipeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4592A141661000AABEE /* ConcreteRecipeViewModelTests.swift */; };
+		AB98A45D2A14176C000AABEE /* RecipeListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A45C2A14176C000AABEE /* RecipeListDataProvider.swift */; };
+		AB98A4612A141819000AABEE /* ConcreteRecipeListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4602A141819000AABEE /* ConcreteRecipeListDataProvider.swift */; };
+		AB98A4642A141A3B000AABEE /* ConcreteRecipeListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4632A141A3B000AABEE /* ConcreteRecipeListDataProviderTests.swift */; };
+		AB98A4672A142082000AABEE /* RecipesDataProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4662A142082000AABEE /* RecipesDataProviderFactory.swift */; };
+		AB98A46A2A1420DD000AABEE /* MockRecipesDataProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4692A1420DD000AABEE /* MockRecipesDataProviderFactory.swift */; };
+		AB98A46D2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A46C2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift */; };
+		AB98A4702A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A46F2A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift */; };
+		AB98A4732A145C63000AABEE /* MockRecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4722A145C63000AABEE /* MockRecipesListPresenterOutput.swift */; };
+		AB98A4762A146218000AABEE /* MockRecipeListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4752A146218000AABEE /* MockRecipeListDataProvider.swift */; };
+		AB98A4782A146518000AABEE /* RecipeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4772A146518000AABEE /* RecipeViewModelFactory.swift */; };
+		AB98A47A2A14655B000AABEE /* MockRecipeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4792A14655B000AABEE /* MockRecipeViewModelFactory.swift */; };
+		AB98A47C2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A47B2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift */; };
+		AB98A4812A1467AF000AABEE /* MockRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4802A1467AF000AABEE /* MockRecipeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +149,24 @@
 		AB4AC0932A12FFD20073BE6F /* MockRecipeListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeListInteractorOutput.swift; sourceTree = "<group>"; };
 		AB4AC0992A1301690073BE6F /* ConcreteRecipeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeListInteractor.swift; sourceTree = "<group>"; };
 		AB6197922A133B9800949996 /* ConcreteRecipeListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeListInteractorTests.swift; sourceTree = "<group>"; };
+		AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesListPresenter.swift; sourceTree = "<group>"; };
+		AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListPresenterOutput.swift; sourceTree = "<group>"; };
+		AB98A4522A14145B000AABEE /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		AB98A4552A141602000AABEE /* ConcreteRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeViewModel.swift; sourceTree = "<group>"; };
+		AB98A4592A141661000AABEE /* ConcreteRecipeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeViewModelTests.swift; sourceTree = "<group>"; };
+		AB98A45C2A14176C000AABEE /* RecipeListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListDataProvider.swift; sourceTree = "<group>"; };
+		AB98A4602A141819000AABEE /* ConcreteRecipeListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeListDataProvider.swift; sourceTree = "<group>"; };
+		AB98A4632A141A3B000AABEE /* ConcreteRecipeListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeListDataProviderTests.swift; sourceTree = "<group>"; };
+		AB98A4662A142082000AABEE /* RecipesDataProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataProviderFactory.swift; sourceTree = "<group>"; };
+		AB98A4692A1420DD000AABEE /* MockRecipesDataProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipesDataProviderFactory.swift; sourceTree = "<group>"; };
+		AB98A46C2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesDataProviderFactory.swift; sourceTree = "<group>"; };
+		AB98A46F2A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesListPresenterTests.swift; sourceTree = "<group>"; };
+		AB98A4722A145C63000AABEE /* MockRecipesListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipesListPresenterOutput.swift; sourceTree = "<group>"; };
+		AB98A4752A146218000AABEE /* MockRecipeListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeListDataProvider.swift; sourceTree = "<group>"; };
+		AB98A4772A146518000AABEE /* RecipeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModelFactory.swift; sourceTree = "<group>"; };
+		AB98A4792A14655B000AABEE /* MockRecipeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeViewModelFactory.swift; sourceTree = "<group>"; };
+		AB98A47B2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeViewModelFactory.swift; sourceTree = "<group>"; };
+		AB98A4802A1467AF000AABEE /* MockRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -654,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC08B2A12FE100073BE6F /* Business Logic */,
+				AB98A44D2A13FBC1000AABEE /* Presentation Logic */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -669,7 +706,8 @@
 		AB4AC0912A12FFC20073BE6F /* Recipe List Scene */ = {
 			isa = PBXGroup;
 			children = (
-				AB4AC0922A12FFC80073BE6F /* Interactors */,
+				AB98A47E2A146782000AABEE /* Business Logic */,
+				AB98A4682A1420C8000AABEE /* Presentation Logic */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -694,6 +732,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC0972A13015A0073BE6F /* Business Logic */,
+				AB98A4492A13FB1C000AABEE /* Presentation Logic */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -726,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6197902A133B8B00949996 /* Business Logic */,
+				AB98A4572A14164E000AABEE /* Presentation Logic */,
 			);
 			path = "Recipe List Scene";
 			sourceTree = "<group>";
@@ -744,6 +784,180 @@
 				AB6197922A133B9800949996 /* ConcreteRecipeListInteractorTests.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		AB98A4492A13FB1C000AABEE /* Presentation Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A45E2A141809000AABEE /* Data Providers */,
+				AB98A46B2A142179000AABEE /* Factories */,
+				AB98A44A2A13FB72000AABEE /* Presenters */,
+				AB98A4542A1415F8000AABEE /* View Models */,
+			);
+			path = "Presentation Logic";
+			sourceTree = "<group>";
+		};
+		AB98A44A2A13FB72000AABEE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AB98A44D2A13FBC1000AABEE /* Presentation Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A45B2A141761000AABEE /* Data Providers */,
+				AB98A4652A14204A000AABEE /* Factories */,
+				AB98A4502A14141D000AABEE /* Presenters */,
+				AB98A4512A141424000AABEE /* View Models */,
+			);
+			path = "Presentation Logic";
+			sourceTree = "<group>";
+		};
+		AB98A4502A14141D000AABEE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AB98A4512A141424000AABEE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4522A14145B000AABEE /* RecipeViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AB98A4542A1415F8000AABEE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4552A141602000AABEE /* ConcreteRecipeViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AB98A4572A14164E000AABEE /* Presentation Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4622A141A30000AABEE /* Data Providers */,
+				AB98A46E2A14225E000AABEE /* Presenters */,
+				AB98A4582A141653000AABEE /* View Models */,
+			);
+			path = "Presentation Logic";
+			sourceTree = "<group>";
+		};
+		AB98A4582A141653000AABEE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4592A141661000AABEE /* ConcreteRecipeViewModelTests.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		AB98A45B2A141761000AABEE /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A45C2A14176C000AABEE /* RecipeListDataProvider.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		AB98A45E2A141809000AABEE /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4602A141819000AABEE /* ConcreteRecipeListDataProvider.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		AB98A4622A141A30000AABEE /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4632A141A3B000AABEE /* ConcreteRecipeListDataProviderTests.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		AB98A4652A14204A000AABEE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4662A142082000AABEE /* RecipesDataProviderFactory.swift */,
+				AB98A4772A146518000AABEE /* RecipeViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		AB98A4682A1420C8000AABEE /* Presentation Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A47F2A1467A5000AABEE /* View Models */,
+				AB98A4712A145C4F000AABEE /* Data Providers */,
+				AB98A4742A14620D000AABEE /* Factories */,
+				AB98A47D2A146772000AABEE /* Presenters */,
+			);
+			path = "Presentation Logic";
+			sourceTree = "<group>";
+		};
+		AB98A46B2A142179000AABEE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A46C2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift */,
+				AB98A47B2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		AB98A46E2A14225E000AABEE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A46F2A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AB98A4712A145C4F000AABEE /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4752A146218000AABEE /* MockRecipeListDataProvider.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		AB98A4742A14620D000AABEE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4692A1420DD000AABEE /* MockRecipesDataProviderFactory.swift */,
+				AB98A4792A14655B000AABEE /* MockRecipeViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		AB98A47D2A146772000AABEE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4722A145C63000AABEE /* MockRecipesListPresenterOutput.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		AB98A47E2A146782000AABEE /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AB4AC0922A12FFC80073BE6F /* Interactors */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		AB98A47F2A1467A5000AABEE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4802A1467AF000AABEE /* MockRecipeViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -877,6 +1091,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4AC0662A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift in Sources */,
+				AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */,
 				AB4AC00F2A12C4E40073BE6F /* RequestError.swift in Sources */,
 				AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */,
 				AB4AC00D2A12C4BD0073BE6F /* ConcreteNetworkingProvider.swift in Sources */,
@@ -884,6 +1099,10 @@
 				AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */,
 				AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */,
 				AB4AC0432A12DEA10073BE6F /* RecipeModel.swift in Sources */,
+				AB98A4782A146518000AABEE /* RecipeViewModelFactory.swift in Sources */,
+				AB98A4672A142082000AABEE /* RecipesDataProviderFactory.swift in Sources */,
+				AB98A4612A141819000AABEE /* ConcreteRecipeListDataProvider.swift in Sources */,
+				AB98A47C2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB4AC02D2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift in Sources */,
 				AB4AC0412A12DDF50073BE6F /* RecipeListModel.swift in Sources */,
@@ -892,13 +1111,18 @@
 				AB4AC01C2A12C90D0073BE6F /* SpoonacularAPI.swift in Sources */,
 				AB4AC0682A12E73B0073BE6F /* RecipeModel+Result.swift in Sources */,
 				AB4AC08E2A12FE2E0073BE6F /* RecipeListInteractor.swift in Sources */,
+				AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */,
 				AB4ABFD52A12BFBE0073BE6F /* SceneDelegate.swift in Sources */,
+				AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */,
 				AB4AC0782A12F25F0073BE6F /* FetchRecipeListWorker.swift in Sources */,
+				AB98A45D2A14176C000AABEE /* RecipeListDataProvider.swift in Sources */,
 				AB4AC0632A12E6060073BE6F /* ConcreteRecipeRepository.swift in Sources */,
 				AB4AC09A2A1301690073BE6F /* ConcreteRecipeListInteractor.swift in Sources */,
+				AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */,
 				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
 				AB4AC07B2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
+				AB98A46D2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,20 +1139,28 @@
 				AB4ABFEA2A12BFBF0073BE6F /* SpoonacularTests.swift in Sources */,
 				AB4AC0342A12D2220073BE6F /* Helper.swift in Sources */,
 				AB4AC0542A12E3A90073BE6F /* MockRecipeRepository.swift in Sources */,
+				AB98A4762A146218000AABEE /* MockRecipeListDataProvider.swift in Sources */,
 				AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */,
+				AB98A47A2A14655B000AABEE /* MockRecipeViewModelFactory.swift in Sources */,
 				AB6197932A133B9800949996 /* ConcreteRecipeListInteractorTests.swift in Sources */,
+				AB98A4732A145C63000AABEE /* MockRecipesListPresenterOutput.swift in Sources */,
 				AB4AC05B2A12E49A0073BE6F /* Stubbable.swift in Sources */,
 				AB4AC0742A12EF370073BE6F /* XCTestCase+XCTAssertThrowsAsyncError.swift in Sources */,
 				AB4AC05D2A12E4A30073BE6F /* Mockable.swift in Sources */,
 				AB4AC07F2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift in Sources */,
 				AB4AC04B2A12DF910073BE6F /* Helper+Models.swift in Sources */,
+				AB98A4702A14226D000AABEE /* ConcreteRecipesListPresenterTests.swift in Sources */,
+				AB98A45A2A141661000AABEE /* ConcreteRecipeViewModelTests.swift in Sources */,
 				AB4AC0572A12E47F0073BE6F /* AssociatedKeys.swift in Sources */,
 				AB4AC0712A12EC810073BE6F /* MockNetworkingProvider.swift in Sources */,
+				AB98A4812A1467AF000AABEE /* MockRecipeViewModel.swift in Sources */,
 				AB4AC0832A12F4780073BE6F /* ConcreteFetchRecipeListWorkerTests.swift in Sources */,
+				AB98A4642A141A3B000AABEE /* ConcreteRecipeListDataProviderTests.swift in Sources */,
 				AB4AC0382A12D2A10073BE6F /* Helper+Utils.swift in Sources */,
 				AB4AC0592A12E48C0073BE6F /* Invocable.swift in Sources */,
 				AB4AC06E2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift in Sources */,
 				AB4AC0492A12DF4B0073BE6F /* RecipeListModelTests.swift in Sources */,
+				AB98A46A2A1420DD000AABEE /* MockRecipesDataProviderFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
