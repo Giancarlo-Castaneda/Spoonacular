@@ -81,6 +81,12 @@
 		AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43C2A15497600AE556D /* NukeExtensions */; };
 		AB64B4402A157C9B00AE556D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B43F2A157C9B00AE556D /* Realm */; };
 		AB64B4422A157C9B00AE556D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB64B4412A157C9B00AE556D /* RealmSwift */; };
+		AB64B4462A157D6C00AE556D /* FavoriteRecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4452A157D6C00AE556D /* FavoriteRecipesRepository.swift */; };
+		AB64B4482A157E1300AE556D /* ConcreteFavoriteRecipesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4472A157E1300AE556D /* ConcreteFavoriteRecipesRepository.swift */; };
+		AB64B44A2A15856F00AE556D /* RecipeInformationModel+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B4492A15856F00AE556D /* RecipeInformationModel+Realm.swift */; };
+		AB64B44C2A15868900AE556D /* RecipeIngredientModel+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B44B2A15868900AE556D /* RecipeIngredientModel+Realm.swift */; };
+		AB64B44E2A158AE600AE556D /* FavoriteRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B44D2A158AE600AE556D /* FavoriteRecipeModel.swift */; };
+		AB64B4502A158B0700AE556D /* FavoriteRecipeIngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB64B44F2A158B0700AE556D /* FavoriteRecipeIngredientModel.swift */; };
 		AB98A44C2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */; };
 		AB98A44F2A13FBD6000AABEE /* RecipesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */; };
 		AB98A4532A14145B000AABEE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4522A14145B000AABEE /* RecipeViewModel.swift */; };
@@ -211,6 +217,12 @@
 		AB64B42F2A152EE300AE556D /* RecipeDetailRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailRoute.swift; sourceTree = "<group>"; };
 		AB64B4322A152F2F00AE556D /* RecipeDetailSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailSceneFactory.swift; sourceTree = "<group>"; };
 		AB64B4342A1530B500AE556D /* ConcreteRecipeDetailSceneRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipeDetailSceneRouteHandler.swift; sourceTree = "<group>"; };
+		AB64B4452A157D6C00AE556D /* FavoriteRecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesRepository.swift; sourceTree = "<group>"; };
+		AB64B4472A157E1300AE556D /* ConcreteFavoriteRecipesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteFavoriteRecipesRepository.swift; sourceTree = "<group>"; };
+		AB64B4492A15856F00AE556D /* RecipeInformationModel+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeInformationModel+Realm.swift"; sourceTree = "<group>"; };
+		AB64B44B2A15868900AE556D /* RecipeIngredientModel+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeIngredientModel+Realm.swift"; sourceTree = "<group>"; };
+		AB64B44D2A158AE600AE556D /* FavoriteRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeModel.swift; sourceTree = "<group>"; };
+		AB64B44F2A158B0700AE556D /* FavoriteRecipeIngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeIngredientModel.swift; sourceTree = "<group>"; };
 		AB98A44B2A13FB87000AABEE /* ConcreteRecipesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesListPresenter.swift; sourceTree = "<group>"; };
 		AB98A44E2A13FBD6000AABEE /* RecipesListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListPresenterOutput.swift; sourceTree = "<group>"; };
 		AB98A4522A14145B000AABEE /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
@@ -499,6 +511,8 @@
 				AB64B4002A14AEF100AE556D /* RecipeInstructionStepModel.swift */,
 				AB4AC0402A12DDF50073BE6F /* RecipeListModel.swift */,
 				AB4AC0422A12DEA10073BE6F /* RecipeModel.swift */,
+				AB64B44D2A158AE600AE556D /* FavoriteRecipeModel.swift */,
+				AB64B44F2A158B0700AE556D /* FavoriteRecipeIngredientModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -533,6 +547,7 @@
 		AB4AC04D2A12E2640073BE6F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AB64B4452A157D6C00AE556D /* FavoriteRecipesRepository.swift */,
 				AB4AC04E2A12E2780073BE6F /* RecipeRepository.swift */,
 			);
 			path = Repositories;
@@ -606,6 +621,7 @@
 		AB4AC0612A12E5D30073BE6F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AB64B4472A157E1300AE556D /* ConcreteFavoriteRecipesRepository.swift */,
 				AB4AC0622A12E6060073BE6F /* ConcreteRecipeRepository.swift */,
 			);
 			path = Repositories;
@@ -614,12 +630,14 @@
 		AB4AC0642A12E6BA0073BE6F /* Data Mappings */ = {
 			isa = PBXGroup;
 			children = (
+				AB64B4492A15856F00AE556D /* RecipeInformationModel+Realm.swift */,
+				AB64B4122A151F9F00AE556D /* RecipeInformationModel+RecipesInformationDTO.swift */,
+				AB64B4102A151F2C00AE556D /* RecipeIngredientModel+ExtendedIngredient.swift */,
+				AB64B44B2A15868900AE556D /* RecipeIngredientModel+Realm.swift */,
 				AB64B40E2A151EB100AE556D /* RecipeInstructionModel+AnalyzedInstructionDTO.swift */,
 				AB64B40A2A151D6700AE556D /* RecipeInstructionStepItemModel+StepItemDTO.swift */,
 				AB64B40C2A151DEC00AE556D /* RecipeInstructionStepModel+StepDTO.swift */,
 				AB4AC0652A12E6CD0073BE6F /* RecipeListModel+RecipesComplexSearchDTO.swift */,
-				AB64B4102A151F2C00AE556D /* RecipeIngredientModel+ExtendedIngredient.swift */,
-				AB64B4122A151F9F00AE556D /* RecipeInformationModel+RecipesInformationDTO.swift */,
 				AB4AC0672A12E73B0073BE6F /* RecipeModel+Result.swift */,
 			);
 			path = "Data Mappings";
@@ -1404,6 +1422,7 @@
 				AB98A4902A146AE2000AABEE /* LayoutDSL+VerticalAnchor.swift in Sources */,
 				AB98A4AF2A1484E6000AABEE /* RouteService.swift in Sources */,
 				AB98A4BB2A14888C000AABEE /* ConcreteRecipesListSceneRouteHandler.swift in Sources */,
+				AB64B44C2A15868900AE556D /* RecipeIngredientModel+Realm.swift in Sources */,
 				AB98A4612A141819000AABEE /* ConcreteRecipeListDataProvider.swift in Sources */,
 				AB64B3FF2A14AE6100AE556D /* RecipeInstructionModel.swift in Sources */,
 				AB98A4A52A1472FB000AABEE /* RecipesListSceneFactory.swift in Sources */,
@@ -1428,8 +1447,11 @@
 				AB4AC0782A12F25F0073BE6F /* FetchRecipeListWorker.swift in Sources */,
 				AB98A45D2A14176C000AABEE /* RecipeListDataProvider.swift in Sources */,
 				AB4AC0632A12E6060073BE6F /* ConcreteRecipeRepository.swift in Sources */,
+				AB64B4462A157D6C00AE556D /* FavoriteRecipesRepository.swift in Sources */,
 				AB4AC09A2A1301690073BE6F /* ConcreteRecipeListInteractor.swift in Sources */,
 				AB64B41C2A1522D600AE556D /* RecipeDetailInteractor.swift in Sources */,
+				AB64B4502A158B0700AE556D /* FavoriteRecipeIngredientModel.swift in Sources */,
+				AB64B44E2A158AE600AE556D /* FavoriteRecipeModel.swift in Sources */,
 				AB64B4302A152EE300AE556D /* RecipeDetailRoute.swift in Sources */,
 				AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */,
 				AB64B4252A15242900AE556D /* RecipeDetailPresenterOutput.swift in Sources */,
@@ -1439,6 +1461,7 @@
 				AB4AC07B2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift in Sources */,
 				AB4AC0182A12C55A0073BE6F /* Data+prettyPrintedJSONString.swift in Sources */,
 				AB64B40F2A151EB100AE556D /* RecipeInstructionModel+AnalyzedInstructionDTO.swift in Sources */,
+				AB64B4482A157E1300AE556D /* ConcreteFavoriteRecipesRepository.swift in Sources */,
 				AB98A49B2A146BD9000AABEE /* RecipeListViewController.swift in Sources */,
 				AB98A48E2A146AD8000AABEE /* LayoutDSL+HorizontalAnchor.swift in Sources */,
 				AB98A46D2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift in Sources */,
@@ -1451,6 +1474,7 @@
 				AB98A4C72A149700000AABEE /* RecipesInformationDTO.swift in Sources */,
 				AB98A48A2A146AC4000AABEE /* LayoutDSL+AbsoluteHorizontalAnchor.swift in Sources */,
 				AB64B4172A1520ED00AE556D /* ConcreteFetchRecipeDetailWorker.swift in Sources */,
+				AB64B44A2A15856F00AE556D /* RecipeInformationModel+Realm.swift in Sources */,
 				AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */,
 				AB98A4BE2A148909000AABEE /* RecipesListRoute.swift in Sources */,
 				AB64B4152A1520B700AE556D /* FetchRecipeDetailWorker.swift in Sources */,
