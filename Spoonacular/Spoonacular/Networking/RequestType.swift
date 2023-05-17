@@ -8,6 +8,7 @@ public protocol RequestType {
     var method: HTTPMethod { get }
     var header: [String: String] { get }
     var body: [String: Any]? { get }
+    var queryItems: [URLQueryItem]? { get }
 }
 
 public extension RequestType {
@@ -17,7 +18,7 @@ public extension RequestType {
     }
 
     var host: String {
-        "api.spoonacular"
+        "api.spoonacular.com"
     }
 
     var header: [String: String] {

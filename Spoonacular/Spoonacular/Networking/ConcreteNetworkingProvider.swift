@@ -17,8 +17,10 @@ final class ConcreteNetworkingProvider: NetworkingProvider {
     private func createURLComponents(endpoint: RequestType) -> URLComponents {
         var urlComponents = URLComponents()
 
+        urlComponents.scheme = endpoint.scheme
         urlComponents.host = endpoint.host
         urlComponents.path = endpoint.path
+        urlComponents.queryItems = endpoint.queryItems
 
         return urlComponents
     }
