@@ -4,6 +4,12 @@ final class RecipeListViewController: UIViewController {
 
     // MARK: - View Components
 
+    private lazy var searchBar = UISearchController().with {
+        $0.searchBar.placeholder = "Look for a recipe..."
+        $0.searchBar.searchBarStyle = .minimal
+        $0.searchResultsUpdater = self
+    }
+
     private lazy var tableView = UITableView(frame: .zero, style: .insetGrouped).with {
         $0.backgroundColor = .clear
         $0.registerCell(UITableViewCell.self)
@@ -16,6 +22,7 @@ final class RecipeListViewController: UIViewController {
 
     private var dataProvider: RecipeListDataProvider?
     private var query = ""
+    private var pendingRequestWorkItem: DispatchWorkItem?
     private let routeService: RouteService
 
     // MARK: - Internal Properties
@@ -50,6 +57,7 @@ final class RecipeListViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .systemPurple
         title = "Recipe List"
+        navigationItem.searchController = searchBar
 
         view.addSubview(tableView)
     }
@@ -140,5 +148,25 @@ extension RecipeListViewController: UITableViewDelegate {
         routeService.navigate(to: RecipeDetailRoute(id: viewModel.id.description),
                               from: self,
                               presentationStyle: .currentContext)
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension RecipeListViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text else { return }
+
+        pendingRequestWorkItem?.cancel()
+
+        let requestWorkItem = DispatchWorkItem { [weak self] in
+            self?.query = query
+            self?.interactor?.fetchRecipes(query: query)
+        }
+
+        pendingRequestWorkItem = requestWorkItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250),
+                                      execute: requestWorkItem)
     }
 }

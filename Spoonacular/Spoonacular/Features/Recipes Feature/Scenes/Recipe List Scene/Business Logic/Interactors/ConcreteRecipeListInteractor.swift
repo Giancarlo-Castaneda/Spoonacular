@@ -9,6 +9,7 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
     private var showedItems: [RecipeModel] = []
     private var offset = 0
     private var total = 0
+    private var previousQuery = ""
     private var isPaginationRequestStillResume = false
 
     // MARK: - Internal Properties
@@ -37,7 +38,12 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
                     return
                 }
 
+                if previousQuery != query {
+                    offset = 0
+                }
                 isPaginationRequestStillResume = true
+                previousQuery = query
+
                 await presenter?.loading()
 
                 let recipeList = try await fetchRecipeListWorker.execute(query: query,
