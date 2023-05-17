@@ -87,6 +87,7 @@
 		AB98A4A02A146FE6000AABEE /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A49F2A146FE6000AABEE /* UITableView+Reusable.swift */; };
 		AB98A4A22A147014000AABEE /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4A12A147014000AABEE /* UITableViewCell+Reusable.swift */; };
 		AB98A4A52A1472FB000AABEE /* RecipesListSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4A42A1472FB000AABEE /* RecipesListSceneFactory.swift */; };
+		AB98A4A72A147EED000AABEE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4A62A147EED000AABEE /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 		AB98A49F2A146FE6000AABEE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		AB98A4A12A147014000AABEE /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 		AB98A4A42A1472FB000AABEE /* RecipesListSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListSceneFactory.swift; sourceTree = "<group>"; };
+		AB98A4A62A147EED000AABEE /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4ABFD22A12BFBE0073BE6F /* AppDelegate.swift */,
+				AB98A4A62A147EED000AABEE /* AppRouter.swift */,
 				AB4ABFD42A12BFBE0073BE6F /* SceneDelegate.swift */,
 			);
 			path = "App Delegate";
@@ -1217,6 +1220,7 @@
 				AB98A48E2A146AD8000AABEE /* LayoutDSL+HorizontalAnchor.swift in Sources */,
 				AB98A46D2A142188000AABEE /* ConcreteRecipesDataProviderFactory.swift in Sources */,
 				AB98A4A22A147014000AABEE /* UITableViewCell+Reusable.swift in Sources */,
+				AB98A4A72A147EED000AABEE /* AppRouter.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
 				AB98A48A2A146AC4000AABEE /* LayoutDSL+AbsoluteHorizontalAnchor.swift in Sources */,
 				AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */,

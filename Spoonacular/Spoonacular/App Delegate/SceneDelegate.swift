@@ -12,9 +12,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let navigationController = UINavigationController(rootViewController: RecipesListSceneFactory(recipeRepository: ConcreteRecipeRepository(networkingProvider: ConcreteNetworkingProvider(jsonDecoder: JSONDecoder()))).build())
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+
+        AppRouter.shared.window = window
+        AppRouter.shared.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
