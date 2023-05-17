@@ -98,6 +98,8 @@
 		AB98A4BB2A14888C000AABEE /* ConcreteRecipesListSceneRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4BA2A14888C000AABEE /* ConcreteRecipesListSceneRouteHandler.swift */; };
 		AB98A4BE2A148909000AABEE /* RecipesListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4BD2A148909000AABEE /* RecipesListRoute.swift */; };
 		AB98A4C02A148961000AABEE /* AppDelegate+ComposeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4BF2A148961000AABEE /* AppDelegate+ComposeRouter.swift */; };
+		AB98A4C72A149700000AABEE /* RecipesInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4C62A149700000AABEE /* RecipesInformationDTO.swift */; };
+		AB98A4C92A149CF3000AABEE /* RecipesInformationDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +215,8 @@
 		AB98A4BA2A14888C000AABEE /* ConcreteRecipesListSceneRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteRecipesListSceneRouteHandler.swift; sourceTree = "<group>"; };
 		AB98A4BD2A148909000AABEE /* RecipesListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListRoute.swift; sourceTree = "<group>"; };
 		AB98A4BF2A148961000AABEE /* AppDelegate+ComposeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ComposeRouter.swift"; sourceTree = "<group>"; };
+		AB98A4C62A149700000AABEE /* RecipesInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInformationDTO.swift; sourceTree = "<group>"; };
+		AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInformationDTOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC02C2A12D0BD0073BE6F /* RecipesComplexSearchDTO.swift */,
+				AB98A4C62A149700000AABEE /* RecipesInformationDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC02F2A12D1D70073BE6F /* RecipesComplexSearchDTOTests.swift */,
+				AB98A4C82A149CF3000AABEE /* RecipesInformationDTOTests.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -1301,6 +1307,7 @@
 				AB98A4A22A147014000AABEE /* UITableViewCell+Reusable.swift in Sources */,
 				AB98A4A72A147EED000AABEE /* AppRouter.swift in Sources */,
 				AB4AC0092A12C4160073BE6F /* RequestType.swift in Sources */,
+				AB98A4C72A149700000AABEE /* RecipesInformationDTO.swift in Sources */,
 				AB98A48A2A146AC4000AABEE /* LayoutDSL+AbsoluteHorizontalAnchor.swift in Sources */,
 				AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */,
 				AB98A4BE2A148909000AABEE /* RecipesListRoute.swift in Sources */,
@@ -1321,6 +1328,7 @@
 				AB4AC0542A12E3A90073BE6F /* MockRecipeRepository.swift in Sources */,
 				AB98A4762A146218000AABEE /* MockRecipeListDataProvider.swift in Sources */,
 				AB4AC0362A12D24F0073BE6F /* Helper+DTOs.swift in Sources */,
+				AB98A4C92A149CF3000AABEE /* RecipesInformationDTOTests.swift in Sources */,
 				AB98A47A2A14655B000AABEE /* MockRecipeViewModelFactory.swift in Sources */,
 				AB6197932A133B9800949996 /* ConcreteRecipeListInteractorTests.swift in Sources */,
 				AB98A4732A145C63000AABEE /* MockRecipesListPresenterOutput.swift in Sources */,

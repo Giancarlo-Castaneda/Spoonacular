@@ -11,4 +11,8 @@ extension SpoonacularAPI {
 
         return .init(path: "/recipes/complexSearch", method: .get, body: nil, queryItems: queryItems)
     }
+
+    static func recipesInformationGET(id: String) -> SpoonacularAPI {
+        .init(path: "/recipes/\(id)/information", method: .get, body: nil, queryItems: nil)
+    }
 }
