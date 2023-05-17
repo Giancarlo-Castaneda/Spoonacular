@@ -82,6 +82,7 @@
 		AB98A4902A146AE2000AABEE /* LayoutDSL+VerticalAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A48F2A146AE2000AABEE /* LayoutDSL+VerticalAnchor.swift */; };
 		AB98A4922A146AEC000AABEE /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4912A146AEC000AABEE /* NSLayoutConstraint.swift */; };
 		AB98A4942A146AF5000AABEE /* UIView+layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4932A146AF5000AABEE /* UIView+layout.swift */; };
+		AB98A4972A146B6A000AABEE /* Composable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98A4962A146B6A000AABEE /* Composable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,7 @@
 		AB98A48F2A146AE2000AABEE /* LayoutDSL+VerticalAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutDSL+VerticalAnchor.swift"; sourceTree = "<group>"; };
 		AB98A4912A146AEC000AABEE /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		AB98A4932A146AF5000AABEE /* UIView+layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layout.swift"; sourceTree = "<group>"; };
+		AB98A4962A146B6A000AABEE /* Composable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		AB4AC0102A12C5200073BE6F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AB98A4952A146B65000AABEE /* Composable */,
 				AB98A4862A146A90000AABEE /* ConstraintsKit */,
 				AB4AC0142A12C5440073BE6F /* Extensions */,
 				AB4AC0112A12C5250073BE6F /* Logger */,
@@ -989,6 +992,14 @@
 			path = ConstraintsKit;
 			sourceTree = "<group>";
 		};
+		AB98A4952A146B65000AABEE /* Composable */ = {
+			isa = PBXGroup;
+			children = (
+				AB98A4962A146B6A000AABEE /* Composable.swift */,
+			);
+			path = Composable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1127,6 +1138,7 @@
 				AB4AC04F2A12E2780073BE6F /* RecipeRepository.swift in Sources */,
 				AB4AC00D2A12C4BD0073BE6F /* ConcreteNetworkingProvider.swift in Sources */,
 				AB98A4882A146AB0000AABEE /* LayoutDSL.swift in Sources */,
+				AB98A4972A146B6A000AABEE /* Composable.swift in Sources */,
 				AB4ABFD72A12BFBE0073BE6F /* ViewController.swift in Sources */,
 				AB4ABFD32A12BFBE0073BE6F /* AppDelegate.swift in Sources */,
 				AB4AC0132A12C52A0073BE6F /* Logger.swift in Sources */,
