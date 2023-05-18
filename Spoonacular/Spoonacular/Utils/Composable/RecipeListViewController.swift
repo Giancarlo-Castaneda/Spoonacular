@@ -55,7 +55,7 @@ final class RecipeListViewController: UIViewController {
     // MARK: - Private Methods
 
     private func setupUI() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemGray6
         title = "Recipe List"
         navigationItem.searchController = searchBar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
