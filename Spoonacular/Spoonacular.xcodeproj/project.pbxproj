@@ -161,6 +161,8 @@
 		AB9F8A082A169B0B008D290A /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A072A169B0B008D290A /* Reachability */; };
 		AB9F8A0A2A169B44008D290A /* IsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A092A169B44008D290A /* IsInternetReachableWorker.swift */; };
 		AB9F8A0C2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */; };
+		AB9F8A122A169EB6008D290A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A112A169EB6008D290A /* Realm */; };
+		AB9F8A142A169ECF008D290A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A132A169ECF008D290A /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +347,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9F8A142A169ECF008D290A /* RealmSwift in Frameworks */,
+				AB9F8A122A169EB6008D290A /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +361,7 @@
 				AB4ABFD12A12BFBE0073BE6F /* Spoonacular */,
 				AB4ABFE82A12BFBF0073BE6F /* SpoonacularTests */,
 				AB4ABFD02A12BFBE0073BE6F /* Products */,
+				AB9F8A0E2A169E58008D290A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1557,6 +1562,13 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		AB9F8A0E2A169E58008D290A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1598,6 +1610,10 @@
 				AB4ABFE72A12BFBF0073BE6F /* PBXTargetDependency */,
 			);
 			name = SpoonacularTests;
+			packageProductDependencies = (
+				AB9F8A112A169EB6008D290A /* Realm */,
+				AB9F8A132A169ECF008D290A /* RealmSwift */,
+			);
 			productName = SpoonacularTests;
 			productReference = AB4ABFE52A12BFBF0073BE6F /* SpoonacularTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -2135,6 +2151,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB9F8A062A169B0B008D290A /* XCRemoteSwiftPackageReference "Reachability" */;
 			productName = Reachability;
+		};
+		AB9F8A112A169EB6008D290A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		AB9F8A132A169ECF008D290A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
