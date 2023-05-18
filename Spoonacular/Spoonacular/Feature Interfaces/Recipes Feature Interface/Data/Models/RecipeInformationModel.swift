@@ -16,7 +16,7 @@ public struct RecipeInformationModel {
     public let title: String
     public let readyInMinutes: Int
     public let servings: Int
-    public let image: URL
+    public let image: URL?
     public let summary: String
     public let dishTypes: [String]
     public let diets: [String]
@@ -37,7 +37,7 @@ public struct RecipeInformationModel {
                 title: String,
                 readyInMinutes: Int,
                 servings: Int,
-                image: URL,
+                image: URL?,
                 summary: String,
                 dishTypes: [String],
                 diets: [String],

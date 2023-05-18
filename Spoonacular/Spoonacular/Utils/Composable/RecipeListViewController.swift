@@ -58,8 +58,17 @@ final class RecipeListViewController: UIViewController {
         view.backgroundColor = .systemPurple
         title = "Recipe List"
         navigationItem.searchController = searchBar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
+                                                            target: self,
+                                                            action: #selector(showFavorites))
 
         view.addSubview(tableView)
+    }
+
+    @objc
+    private func showFavorites() {
+        let vc = FavoriteRecipesViewController(routeService: routeService)
+        navigationController?.present(vc, animated: true)
     }
 
     private func setupContraints() {

@@ -18,6 +18,8 @@ final class RecipeDetailViewController: UIViewController {
     // MARK: - Private Properties
 
     private let recipeId: String
+    private let favoritesRepository: FavoriteRecipesRepository
+    private var recipe: RecipeInformationModel?
 
     // MARK: - Internal Properties
 
@@ -25,8 +27,9 @@ final class RecipeDetailViewController: UIViewController {
 
     // MARK: - Initialization
 
-    init(recipeId: String) {
+    init(recipeId: String, favoritesRepository: FavoriteRecipesRepository) {
         self.recipeId = recipeId
+        self.favoritesRepository = favoritesRepository
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -49,6 +52,10 @@ final class RecipeDetailViewController: UIViewController {
     // MARK: - Private Methods
 
     private func setupUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(markFavorite))
         view.backgroundColor = .systemPurple
 
         view.addSubview(imageView)
@@ -78,6 +85,22 @@ final class RecipeDetailViewController: UIViewController {
         present(alert, animated: true)
     }
 
+    @objc
+    private func markFavorite() {
+        Task {
+            do {
+                guard let recipe else { return }
+                let recipeTosave = FavoriteRecipeModel()
+                recipeTosave.id = recipe.id
+                recipeTosave.image = recipe.image?.absoluteString ?? ""
+
+                let saved = try favoritesRepository.addFavorite(recipe: recipeTosave)
+            } catch {
+                print("::::error markFavorite", error.localizedDescription)
+            }
+        }
+    }
+
     private func loadImage(url: URL) {
         let request = ImageRequest(url: url)
 
@@ -98,7 +121,10 @@ extension RecipeDetailViewController: RecipeDetailPresenterOutput {
     func configure(state: RecipeDetailViewState) {
         switch state {
         case let .content(recipe):
-            loadImage(url: recipe.image)
+            self.recipe = recipe
+            if let url = recipe.image {
+                loadImage(url: url)
+            }
             nameLabel.text = recipe.title
             instructionsLabel.text = recipe.instructions
 

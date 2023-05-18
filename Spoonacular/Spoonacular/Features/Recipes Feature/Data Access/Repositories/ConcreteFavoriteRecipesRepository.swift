@@ -10,35 +10,42 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
     // MARK: - Initialization
 
     init() {
-        self.realmDB = try! Realm()
+        realmDB = try! Realm()
     }
 
-    // MARK: - Private Methods
+    // MARK: - Internal Methods
 
-    private func fetchFavorites() -> [RecipeInformationModel] {
+    func fetchFavorites() -> [RecipeInformationModel] {
         let favorites = realmDB.objects(FavoriteRecipeModel.self)
 
         return favorites.map { RecipeInformationModel($0) }
     }
 
-    // MARK: - Internal Methods
-
-    func addFavorite(recipe: FavoriteRecipeModel) async throws -> [RecipeInformationModel] {
-        try await realmDB.asyncWrite {
+    func addFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel] {
+        if let _ = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id) {
+            throw FavoriteRecipesRepositoryError.itemAlreadyExists
+        }
+        try realmDB.write {
             realmDB.add(recipe)
         }
 
         return fetchFavorites()
     }
 
-    func deleteFavorite(recipe: FavoriteRecipeModel) async throws -> [RecipeInformationModel] {
-        let objectId = try ObjectId(string: recipe.id.description)
-        if let task = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: objectId) {
-            try await realmDB.asyncWrite {
-                self.realmDB.delete(recipe)
-            }
+    func deleteFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel] {
+        guard
+            let recipeToDelete = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id)
+        else { throw FavoriteRecipesRepositoryError.itemNotFound }
+
+        try realmDB.write {
+            realmDB.delete(recipeToDelete)
         }
 
         return fetchFavorites()
     }
+}
+
+public enum FavoriteRecipesRepositoryError: Error {
+    case itemAlreadyExists
+    case itemNotFound
 }

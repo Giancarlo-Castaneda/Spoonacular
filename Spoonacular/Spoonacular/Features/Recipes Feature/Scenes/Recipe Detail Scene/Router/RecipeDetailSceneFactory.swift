@@ -17,10 +17,11 @@ final class RecipeDetailSceneFactory {
     // MARK: - Internal Methods
 
     func build() -> UIViewController {
+        let favoriteRepository = ConcreteFavoriteRecipesRepository()
         let fetchRecipeDetailWorker = ConcreteFetchRecipeDetailWorker(repository: recipeRepository)
         let interactor = ConcreteRecipeDetailInteractor(fetchRecipeDetailWorker: fetchRecipeDetailWorker)
         let presenter = ConcreteRecipeDetailPresenter()
-        let viewController = RecipeDetailViewController(recipeId: recipeId)
+        let viewController = RecipeDetailViewController(recipeId: recipeId, favoritesRepository: favoriteRepository)
 
         viewController.interactor = interactor
         interactor.presenter = presenter

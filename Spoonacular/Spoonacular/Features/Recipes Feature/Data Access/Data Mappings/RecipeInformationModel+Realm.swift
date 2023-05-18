@@ -21,7 +21,7 @@ extension RecipeInformationModel {
                   title: realmData.title,
                   readyInMinutes: realmData.readyInMinutes,
                   servings: realmData.servings,
-                  image: URL(string: realmData.image)!,
+                  image: URL(string: realmData.image),
                   summary: realmData.summary,
                   dishTypes: dishTypes,
                   diets: diets,

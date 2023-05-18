@@ -2,6 +2,7 @@ import Foundation
 
 public protocol FavoriteRecipesRepository {
 
-    func addFavorite(recipe: FavoriteRecipeModel) async throws -> [RecipeInformationModel]
-    func deleteFavorite(recipe: FavoriteRecipeModel) async throws -> [RecipeInformationModel]
+    func fetchFavorites() -> [RecipeInformationModel]
+    func addFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel]
+    func deleteFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel]
 }
