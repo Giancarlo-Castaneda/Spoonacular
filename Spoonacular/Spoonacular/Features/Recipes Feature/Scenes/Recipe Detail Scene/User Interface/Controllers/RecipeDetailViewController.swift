@@ -54,7 +54,7 @@ final class RecipeDetailViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(markFavorite))
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemGray6
 
         view.addSubview(imageView)
         view.addSubview(nameLabel)
@@ -114,7 +114,7 @@ extension RecipeDetailViewController: RecipeDetailPresenterOutput {
                 loadImage(url: url)
             }
             nameLabel.text = recipe.title
-            instructionsLabel.text = recipe.instructions
+            instructionsLabel.attributedText = recipe.instructions.htmlAttributedString()
 
         case let .failure(title, message):
             showAlert(title: title, message: message)
@@ -122,5 +122,20 @@ extension RecipeDetailViewController: RecipeDetailPresenterOutput {
         case .loading:
             break
         }
+    }
+}
+
+extension String {
+
+    func htmlAttributedString() -> NSAttributedString? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+
+        return try? NSAttributedString(
+            data: data,
+            options: [.documentType: NSAttributedString.DocumentType.html],
+            documentAttributes: nil
+        )
     }
 }
