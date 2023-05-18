@@ -58,7 +58,8 @@ final class RecipeListViewController: UIViewController {
         view.backgroundColor = .systemGray6
         title = "Recipe List"
         navigationItem.searchController = searchBar
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark.fill"),
+                                                            style: .plain,
                                                             target: self,
                                                             action: #selector(showFavorites))
 
@@ -84,6 +85,24 @@ final class RecipeListViewController: UIViewController {
 
         present(alert, animated: true)
     }
+
+    private func showLoading() {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.tintColor = view.tintColor
+        indicator.startAnimating()
+        tableView.backgroundView = indicator
+    }
+
+    private func resetView() {
+        tableView.backgroundView = nil
+    }
+
+    private func showEmptyView() {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Oops, no recipes here."
+        tableView.backgroundView = label
+    }
 }
 
 // MARK: - RecipesListPresenterOutput
@@ -91,16 +110,19 @@ final class RecipeListViewController: UIViewController {
 extension RecipeListViewController: RecipesListPresenterOutput {
 
     func configure(state: RecipeListViewState) {
+        resetView()
+
         switch state {
         case let .content(dataProvider):
             self.dataProvider = dataProvider
             tableView.reloadData()
 
         case let .failure(title, message):
+            showEmptyView()
             showAlert(title: title, message: message)
 
         case .loading:
-            break
+            showLoading()
         }
     }
 }
