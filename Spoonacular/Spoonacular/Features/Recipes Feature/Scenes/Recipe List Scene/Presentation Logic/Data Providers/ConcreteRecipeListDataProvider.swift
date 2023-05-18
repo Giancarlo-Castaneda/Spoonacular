@@ -24,7 +24,7 @@ final class ConcreteRecipeListDataProvider: RecipeListDataProvider {
     // MARK: - Internal Methods
 
     func numberOfSections() -> Int {
-        1
+        sections.count
     }
 
     func numberOfRows(inSection section: Int) -> Int {
@@ -32,7 +32,7 @@ final class ConcreteRecipeListDataProvider: RecipeListDataProvider {
             (0..<numberOfSections()) ~= section
         else { return 0 }
 
-        return sections.count
+        return 1
     }
 
     func viewModel(at indexPath: IndexPath) -> RecipeViewModel? {
@@ -41,6 +41,6 @@ final class ConcreteRecipeListDataProvider: RecipeListDataProvider {
             (0..<numberOfRows(inSection: indexPath.section)) ~= indexPath.row
         else { return nil }
 
-        return sections[indexPath.row]
+        return sections[indexPath.section]
     }
 }

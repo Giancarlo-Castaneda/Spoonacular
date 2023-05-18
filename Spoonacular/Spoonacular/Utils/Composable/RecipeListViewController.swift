@@ -12,7 +12,7 @@ final class RecipeListViewController: UIViewController {
 
     private lazy var tableView = UITableView(frame: .zero, style: .insetGrouped).with {
         $0.backgroundColor = .clear
-        $0.registerCell(UITableViewCell.self)
+        $0.registerCell(RecipeCell.self)
         $0.dataSource = self
         $0.delegate = self
         $0.showsVerticalScrollIndicator = false
@@ -122,13 +122,8 @@ extension RecipeListViewController: UITableViewDataSource {
             let viewModel = dataProvider?.viewModel(at: indexPath)
         else { fatalError("Undefined view model for indexPath \(indexPath)") }
 
-        let cell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
-
-        var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = viewModel.title
-        contentConfiguration.textProperties.color = .systemMint
-
-        cell.contentConfiguration = contentConfiguration
+        let cell = tableView.dequeueCell(RecipeCell.self, for: indexPath)
+        cell.configure(image: viewModel.image, title: viewModel.title)
 
         return cell
     }
@@ -157,6 +152,20 @@ extension RecipeListViewController: UITableViewDelegate {
         routeService.navigate(to: RecipeDetailRoute(id: viewModel.id.description),
                               from: self,
                               presentationStyle: .currentContext)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = view.backgroundColor
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
     }
 }
 
