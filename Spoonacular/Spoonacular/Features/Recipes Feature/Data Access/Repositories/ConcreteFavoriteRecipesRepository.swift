@@ -3,20 +3,10 @@ import RealmSwift
 
 final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
 
-    // MARK: - Private Properties
-
-    private var realmDB: Realm!
-
-    // MARK: - Initialization
-
-    init() {
-        realmDB = try! Realm()
-    }
-
     // MARK: - Internal Methods
 
     func fetchFavorites() -> [RecipeInformationModel] {
-        realmDB = try! Realm()
+        let realmDB = try! Realm()
 
         let favorites = realmDB.objects(FavoriteRecipeModel.self)
 
@@ -24,6 +14,8 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
     }
 
     func addFavorite(recipe: FavoriteRecipeModel) throws {
+        let realmDB = try Realm()
+
         if let _ = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id) {
             throw FavoriteRecipesRepositoryError.itemAlreadyExists
         }
@@ -33,6 +25,8 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
     }
 
     func deleteFavorite(recipe: FavoriteRecipeModel) throws {
+        let realmDB = try Realm()
+
         guard
             let recipeToDelete = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id)
         else { throw FavoriteRecipesRepositoryError.itemNotFound }
