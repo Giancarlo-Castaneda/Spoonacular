@@ -6,6 +6,7 @@ final class ConcreteRecipeDetailInteractor: RecipeDetailInteractor {
 
     private let fetchRecipeDetailWorker: FetchRecipeDetailWorker
     private let addFavoriteWorker: AddFavoriteRecipeWorker
+    private let isInternetReachableWorker: IsInternetReachableWorker
 
     // MARK: - Internal Properties
 
@@ -13,9 +14,13 @@ final class ConcreteRecipeDetailInteractor: RecipeDetailInteractor {
 
     // MARK: - Initialization
 
-    init(fetchRecipeDetailWorker: FetchRecipeDetailWorker, addFavoriteWorker: AddFavoriteRecipeWorker) {
+    init(fetchRecipeDetailWorker: FetchRecipeDetailWorker,
+         addFavoriteWorker: AddFavoriteRecipeWorker,
+         isInternetReachableWorker: IsInternetReachableWorker) {
+
         self.fetchRecipeDetailWorker = fetchRecipeDetailWorker
         self.addFavoriteWorker = addFavoriteWorker
+        self.isInternetReachableWorker = isInternetReachableWorker
     }
 
     // MARK: - Internal Methods
@@ -35,6 +40,13 @@ final class ConcreteRecipeDetailInteractor: RecipeDetailInteractor {
     func fetchRecipeDetail(id: String) {
         Task {
             do {
+                guard
+                    try isInternetReachableWorker.execute()
+                else {
+                    await presenter?.noInternetConnection()
+                    return
+                }
+
                 await presenter?.loading()
 
                 let detail = try await fetchRecipeDetailWorker.execute(id: id)

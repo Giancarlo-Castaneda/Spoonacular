@@ -158,6 +158,9 @@
 		AB9F8A002A1686CB008D290A /* FavoriteRecipeCell+LayoutConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F89FF2A1686CB008D290A /* FavoriteRecipeCell+LayoutConstant.swift */; };
 		AB9F8A022A168F57008D290A /* UIView+AddGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A012A168F57008D290A /* UIView+AddGradient.swift */; };
 		AB9F8A052A16931C008D290A /* FavoriteRecipesRepositoryError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A042A16931C008D290A /* FavoriteRecipesRepositoryError+LocalizedError.swift */; };
+		AB9F8A082A169B0B008D290A /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A072A169B0B008D290A /* Reachability */; };
+		AB9F8A0A2A169B44008D290A /* IsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A092A169B44008D290A /* IsInternetReachableWorker.swift */; };
+		AB9F8A0C2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +324,8 @@
 		AB9F89FF2A1686CB008D290A /* FavoriteRecipeCell+LayoutConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteRecipeCell+LayoutConstant.swift"; sourceTree = "<group>"; };
 		AB9F8A012A168F57008D290A /* UIView+AddGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddGradient.swift"; sourceTree = "<group>"; };
 		AB9F8A042A16931C008D290A /* FavoriteRecipesRepositoryError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteRecipesRepositoryError+LocalizedError.swift"; sourceTree = "<group>"; };
+		AB9F8A092A169B44008D290A /* IsInternetReachableWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInternetReachableWorker.swift; sourceTree = "<group>"; };
+		AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteIsInternetReachableWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +335,7 @@
 			files = (
 				AB64B4422A157C9B00AE556D /* RealmSwift in Frameworks */,
 				AB64B4402A157C9B00AE556D /* Realm in Frameworks */,
+				AB9F8A082A169B0B008D290A /* Reachability in Frameworks */,
 				AB64B43B2A15497600AE556D /* Nuke in Frameworks */,
 				AB64B43D2A15497600AE556D /* NukeExtensions in Frameworks */,
 			);
@@ -768,6 +774,7 @@
 				AB64B4642A15F6F200AE556D /* FetchFavoriteRecipesWorker.swift */,
 				AB64B4142A1520B700AE556D /* FetchRecipeDetailWorker.swift */,
 				AB4AC0772A12F25F0073BE6F /* FetchRecipeListWorker.swift */,
+				AB9F8A092A169B44008D290A /* IsInternetReachableWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -775,11 +782,7 @@
 		AB4AC0792A12F2A80073BE6F /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
-				AB64B46A2A15F80B00AE556D /* ConcreteAddFavoriteRecipeWorker.swift */,
-				AB64B46E2A15F8B000AE556D /* ConcreteDeleteFavoriteRecipeWorker.swift */,
-				AB64B4662A15F73700AE556D /* ConcreteFetchFavoriteRecipesWorker.swift */,
-				AB64B4162A1520EC00AE556D /* ConcreteFetchRecipeDetailWorker.swift */,
-				AB4AC07A2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift */,
+				AB9F8A0D2A169BC3008D290A /* Workers */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -1541,6 +1544,19 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		AB9F8A0D2A169BC3008D290A /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				AB64B46A2A15F80B00AE556D /* ConcreteAddFavoriteRecipeWorker.swift */,
+				AB64B46E2A15F8B000AE556D /* ConcreteDeleteFavoriteRecipeWorker.swift */,
+				AB64B4662A15F73700AE556D /* ConcreteFetchFavoriteRecipesWorker.swift */,
+				AB64B4162A1520EC00AE556D /* ConcreteFetchRecipeDetailWorker.swift */,
+				AB4AC07A2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift */,
+				AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1562,6 +1578,7 @@
 				AB64B43C2A15497600AE556D /* NukeExtensions */,
 				AB64B43F2A157C9B00AE556D /* Realm */,
 				AB64B4412A157C9B00AE556D /* RealmSwift */,
+				AB9F8A072A169B0B008D290A /* Reachability */,
 			);
 			productName = Spoonacular;
 			productReference = AB4ABFCF2A12BFBE0073BE6F /* Spoonacular.app */;
@@ -1616,6 +1633,7 @@
 			packageReferences = (
 				AB64B4392A15497600AE556D /* XCRemoteSwiftPackageReference "Nuke" */,
 				AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				AB9F8A062A169B0B008D290A /* XCRemoteSwiftPackageReference "Reachability" */,
 			);
 			productRefGroup = AB4ABFD02A12BFBE0073BE6F /* Products */;
 			projectDirPath = "";
@@ -1695,6 +1713,7 @@
 				AB64B46B2A15F80B00AE556D /* ConcreteAddFavoriteRecipeWorker.swift in Sources */,
 				AB64B4672A15F73700AE556D /* ConcreteFetchFavoriteRecipesWorker.swift in Sources */,
 				AB98A4A52A1472FB000AABEE /* RecipesListSceneFactory.swift in Sources */,
+				AB9F8A0C2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift in Sources */,
 				AB98A47C2A146684000AABEE /* ConcreteRecipeViewModelFactory.swift in Sources */,
 				AB4AC0162A12C54A0073BE6F /* Dictionary+prettyPrintedJSONString.swift in Sources */,
 				AB9CE4532A16035300841376 /* ConcreteFavoriteRecipesDataProvider.swift in Sources */,
@@ -1730,6 +1749,7 @@
 				AB4AC09A2A1301690073BE6F /* ConcreteRecipeListInteractor.swift in Sources */,
 				AB64B41C2A1522D600AE556D /* RecipeDetailInteractor.swift in Sources */,
 				AB64B4502A158B0700AE556D /* FavoriteRecipeIngredientModel.swift in Sources */,
+				AB9F8A0A2A169B44008D290A /* IsInternetReachableWorker.swift in Sources */,
 				AB64B44E2A158AE600AE556D /* FavoriteRecipeModel.swift in Sources */,
 				AB64B4302A152EE300AE556D /* RecipeDetailRoute.swift in Sources */,
 				AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */,
@@ -2080,6 +2100,14 @@
 				kind = branch;
 			};
 		};
+		AB9F8A062A169B0B008D290A /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2102,6 +2130,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB64B43E2A157C9B00AE556D /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		AB9F8A072A169B0B008D290A /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB9F8A062A169B0B008D290A /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

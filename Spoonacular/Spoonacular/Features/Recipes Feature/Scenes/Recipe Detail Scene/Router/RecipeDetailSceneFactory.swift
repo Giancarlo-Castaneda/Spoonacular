@@ -21,8 +21,10 @@ final class RecipeDetailSceneFactory {
     func build() -> UIViewController {
         let addFavoriteWorker = ConcreteAddFavoriteRecipeWorker(repository: favoriteRecipeRepository)
         let fetchRecipeDetailWorker = ConcreteFetchRecipeDetailWorker(repository: recipeRepository)
+        let isInternetReachableWorker = ConcreteIsInternetReachableWorker()
         let interactor = ConcreteRecipeDetailInteractor(fetchRecipeDetailWorker: fetchRecipeDetailWorker,
-                                                        addFavoriteWorker: addFavoriteWorker)
+                                                        addFavoriteWorker: addFavoriteWorker,
+                                                        isInternetReachableWorker: isInternetReachableWorker)
         let presenter = ConcreteRecipeDetailPresenter()
         let viewController = RecipeDetailViewController(recipeId: recipeId)
 

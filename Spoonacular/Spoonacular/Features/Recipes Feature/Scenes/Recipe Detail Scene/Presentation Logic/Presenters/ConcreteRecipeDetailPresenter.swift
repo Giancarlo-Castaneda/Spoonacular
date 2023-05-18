@@ -12,6 +12,10 @@ final class ConcreteRecipeDetailPresenter: RecipeDetailInteractorOutput {
         await view?.configure(state: .content(recipe: detail))
     }
 
+    func noInternetConnection() async {
+        await view?.configure(state: .failure(title: "Uups!", message: "Maybe you don't have internet connection"))
+    }
+
     func loading() async {
         await view?.configure(state: .loading)
     }

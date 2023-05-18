@@ -18,7 +18,9 @@ final class RecipesListSceneFactory {
 
     func build() -> UIViewController {
         let fetchWorker = ConcreteFetchRecipeListWorker(repository: recipeRepository)
-        let interactor = ConcreteRecipeListInteractor(fetchRecipeListWorker: fetchWorker)
+        let isInternetReachableWorker = ConcreteIsInternetReachableWorker()
+        let interactor = ConcreteRecipeListInteractor(fetchRecipeListWorker: fetchWorker,
+                                                      isInternetReachableWorker: isInternetReachableWorker)
         let viewModelFactory = ConcreteRecipeViewModelFactory()
         let dataProviderFactory = ConcreteRecipesDataProviderFactory(viewModelFactory: viewModelFactory)
         let presenter = ConcreteRecipesListPresenter(dataProviderFactory: dataProviderFactory)

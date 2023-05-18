@@ -5,6 +5,7 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
     // MARK: - Private Properties
 
     private let fetchRecipeListWorker: FetchRecipeListWorker
+    private let isInternetReachableWorker: IsInternetReachableWorker
     private let recipesPerPage = 20
     private var showedItems: [RecipeModel] = []
     private var offset = 0
@@ -18,8 +19,9 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
 
     // MARK: - Initialization
 
-    init(fetchRecipeListWorker: FetchRecipeListWorker) {
+    init(fetchRecipeListWorker: FetchRecipeListWorker, isInternetReachableWorker: IsInternetReachableWorker) {
         self.fetchRecipeListWorker = fetchRecipeListWorker
+        self.isInternetReachableWorker = isInternetReachableWorker
     }
 
     // MARK: - Internal Methods
@@ -27,6 +29,13 @@ final class ConcreteRecipeListInteractor: RecipeListInteractor {
     func fetchRecipes(query: String) {
         Task {
             do {
+                guard
+                    try isInternetReachableWorker.execute()
+                else {
+                    await presenter?.noInternetConnection()
+                    return
+                }
+
                 guard
                     !isPaginationRequestStillResume
                 else { return }

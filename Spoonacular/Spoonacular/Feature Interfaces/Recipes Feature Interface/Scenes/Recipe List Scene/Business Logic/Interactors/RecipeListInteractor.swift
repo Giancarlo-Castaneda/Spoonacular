@@ -8,6 +8,7 @@ public protocol RecipeListInteractor {
 public protocol RecipeListInteractorOutput {
 
     func fetchedRecipes(recipes: [RecipeModel]) async
+    func noInternetConnection() async
     func loading() async
     func error(_ error: Error) async
 }
