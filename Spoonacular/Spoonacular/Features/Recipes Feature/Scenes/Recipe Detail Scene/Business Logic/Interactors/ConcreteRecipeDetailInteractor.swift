@@ -31,6 +31,8 @@ final class ConcreteRecipeDetailInteractor: RecipeDetailInteractor {
                 let recipeToSave = FavoriteRecipeModel.map(model: recipe)
 
                 try addFavoriteWorker.execute(recipe: recipeToSave)
+
+                await presenter?.markedAsFavorite()
             } catch {
                 await presenter?.error(error)
             }

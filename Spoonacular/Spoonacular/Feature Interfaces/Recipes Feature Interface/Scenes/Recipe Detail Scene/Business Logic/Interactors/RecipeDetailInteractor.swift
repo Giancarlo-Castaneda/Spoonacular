@@ -8,6 +8,7 @@ public protocol RecipeDetailInteractor {
 
 public protocol RecipeDetailInteractorOutput {
 
+    func markedAsFavorite() async
     func fetchedRecipeDetail(detail: RecipeInformationModel) async
     func loading() async
     func noInternetConnection() async

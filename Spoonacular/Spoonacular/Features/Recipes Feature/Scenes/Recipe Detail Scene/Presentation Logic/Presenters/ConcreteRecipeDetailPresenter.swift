@@ -8,6 +8,10 @@ final class ConcreteRecipeDetailPresenter: RecipeDetailInteractorOutput {
 
     // MARK: - Internal Methods
 
+    func markedAsFavorite() async {
+        await view?.configure(state: .failure(title: "Confirmation", message: "Recipe saved to your favorites"))
+    }
+
     func fetchedRecipeDetail(detail: RecipeInformationModel) async {
         await view?.configure(state: .content(recipe: detail))
     }
