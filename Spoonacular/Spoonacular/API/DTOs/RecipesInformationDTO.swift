@@ -101,7 +101,7 @@ extension RecipesInformationDTO {
         // MARK: Public Properties
 
         public let id: Int
-        public let image: String
+        public let image: String?
         public let consistency: String
         public let original: String
         public let amount: Double
@@ -109,7 +109,7 @@ extension RecipesInformationDTO {
 
         // MARK: Initialization
 
-        public init(id: Int, image: String, consistency: String, original: String, amount: Double, unit: String) {
+        public init(id: Int, image: String?, consistency: String, original: String, amount: Double, unit: String) {
             self.id = id
             self.image = image
             self.consistency = consistency

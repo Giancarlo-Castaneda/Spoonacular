@@ -14,7 +14,7 @@ public class FavoriteRecipeIngredientModel: Object {
         let instance = FavoriteRecipeIngredientModel()
 
         instance.id = model.id
-        instance.image = model.image
+        instance.image = model.image ?? ""
         instance.consistency = model.consistency
         instance.name = model.name
         instance.amount = model.amount
