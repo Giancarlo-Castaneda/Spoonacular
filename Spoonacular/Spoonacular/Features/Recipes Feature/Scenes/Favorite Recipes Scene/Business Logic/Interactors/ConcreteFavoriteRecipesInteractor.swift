@@ -20,19 +20,14 @@ final class ConcreteFavoriteRecipesInteractor: FavoriteRecipesInteractor {
 
     // MARK: - Internal Methods
 
-    func deleteFavorite(recipe: RecipeInformationModel) {
+    func deleteFavorite(recipeId: Int, indexPath: IndexPath) {
         Task {
             do {
                 await presenter?.loading()
 
-                let recipeToDelete = FavoriteRecipeModel()
-                recipeToDelete.id = recipe.id
-                recipeToDelete.image = recipe.image?.absoluteString ?? ""
-
-                try deleteFavoriteWorker.execute(recipe: recipeToDelete)
+                try deleteFavoriteWorker.execute(recipeId: recipeId)
 
                 let favoriteRecipes = fetchFavoriteWorker.execute()
-
                 await presenter?.fetchedFavoriteRecipes(recipes: favoriteRecipes)
             } catch {
                 await presenter?.error(error)

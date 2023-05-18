@@ -1474,8 +1474,8 @@
 		AB9CE44D2A1601F800841376 /* Presentation Logic */ = {
 			isa = PBXGroup;
 			children = (
-				AB9F8A032A1692FE008D290A /* Error */,
 				AB9CE4512A16034400841376 /* Data Providers */,
+				AB9F8A032A1692FE008D290A /* Error */,
 				AB9CE44E2A16021C00841376 /* Presenters */,
 				AB9CE45A2A1605D600841376 /* Router */,
 				AB9CE4542A16041400841376 /* View Models */,

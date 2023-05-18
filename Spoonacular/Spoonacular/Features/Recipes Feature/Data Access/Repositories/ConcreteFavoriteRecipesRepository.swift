@@ -24,11 +24,11 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
         }
     }
 
-    func deleteFavorite(recipe: FavoriteRecipeModel) throws {
+    func deleteFavorite(recipeId: Int) throws {
         let realmDB = try Realm()
 
         guard
-            let recipeToDelete = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id)
+            let recipeToDelete = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipeId)
         else { throw FavoriteRecipesRepositoryError.itemNotFound }
 
         try realmDB.write {

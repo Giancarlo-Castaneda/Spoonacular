@@ -2,7 +2,7 @@ import Foundation
 
 public protocol FavoriteRecipesInteractor {
 
-    func deleteFavorite(recipe: RecipeInformationModel)
+    func deleteFavorite(recipeId: Int, indexPath: IndexPath)
     func fetchFavoriteRecipes()
 }
 

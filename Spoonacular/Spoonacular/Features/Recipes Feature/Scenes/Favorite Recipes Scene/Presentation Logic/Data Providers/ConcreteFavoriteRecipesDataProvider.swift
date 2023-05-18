@@ -17,7 +17,8 @@ final class ConcreteFavoriteRecipesDataProvider: FavoriteRecipesDataProvider {
 
     private func generateSections() -> [FavoriteRecipeViewModel] {
         favoriteRecipes.map {
-            ConcreteFavoriteRecipeViewModel(title: $0.title,
+            ConcreteFavoriteRecipeViewModel(id: $0.id,
+                                            title: $0.title,
                                             image: ($0.image ?? URL(string: "foo.com")!),
                                             preparationTime: $0.readyInMinutes)
         }

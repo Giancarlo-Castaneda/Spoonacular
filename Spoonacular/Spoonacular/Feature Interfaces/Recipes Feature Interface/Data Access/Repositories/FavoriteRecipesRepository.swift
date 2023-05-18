@@ -4,5 +4,5 @@ public protocol FavoriteRecipesRepository {
 
     func fetchFavorites() -> [RecipeInformationModel]
     func addFavorite(recipe: FavoriteRecipeModel) throws
-    func deleteFavorite(recipe: FavoriteRecipeModel) throws
+    func deleteFavorite(recipeId: Int) throws
 }

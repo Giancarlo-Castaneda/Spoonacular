@@ -14,7 +14,7 @@ final class ConcreteDeleteFavoriteRecipeWorker: DeleteFavoriteRecipeWorker {
 
     // MARK: - Internal Methods
 
-    func execute(recipe: FavoriteRecipeModel) throws {
-        try repository.deleteFavorite(recipe: recipe)
+    func execute(recipeId: Int) throws {
+        try repository.deleteFavorite(recipeId: recipeId)
     }
 }

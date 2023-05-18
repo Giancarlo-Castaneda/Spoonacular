@@ -100,6 +100,9 @@ extension FavoriteRecipesViewController: FavoriteRecipesPresenterOutput {
             showEmptyView()
             showAlert(title: title, message: message)
 
+        case .emptyRecipes:
+            showEmptyView()
+
         case .loading:
             showLoading()
         }
@@ -127,6 +130,17 @@ extension FavoriteRecipesViewController: UITableViewDataSource {
         cell.configure(image: viewModel.image, title: viewModel.title, subtitle: viewModel.preparationTime)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+
+        guard
+            let viewModel = dataProvider?.viewModel(at: indexPath)
+        else { fatalError("Undefined view model for indexPath \(indexPath)") }
+
+        interactor?.deleteFavorite(recipeId: viewModel.id, indexPath: indexPath)
     }
 }
 

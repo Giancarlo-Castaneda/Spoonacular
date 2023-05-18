@@ -6,6 +6,7 @@ public protocol FavoriteRecipesPresenterOutput: AnyObject {
 }
 
 public enum FavoriteRecipesViewState {
+    case emptyRecipes
     case content(dataProvider: FavoriteRecipesDataProvider)
     case failure(title: String, message: String)
     case loading
