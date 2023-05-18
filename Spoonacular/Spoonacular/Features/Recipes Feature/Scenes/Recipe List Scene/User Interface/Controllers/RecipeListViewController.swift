@@ -158,7 +158,7 @@ extension RecipeListViewController: UITableViewDelegate {
         let offSetY = self.tableView.contentOffset.y
         let contentHeight = self.tableView.contentSize.height
 
-        if offSetY > (contentHeight - self.tableView.frame.size.height - 100) {
+        if offSetY > (contentHeight - self.tableView.frame.size.height - 200) {
             interactor?.fetchRecipes(query: query)
         }
     }
