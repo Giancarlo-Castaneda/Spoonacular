@@ -9,16 +9,13 @@ final class ConcreteFavoriteRecipesPresenter: FavoriteRecipesInteractorOutput {
     // MARK: - Internal Methods
 
     func fetchedFavoriteRecipes(recipes: [RecipeInformationModel]) async {
-        guard
-            !recipes.isEmpty
-        else {
-            await view?.configure(state: .emptyRecipes)
-            return
-        }
-
         let dataProvider = ConcreteFavoriteRecipesDataProvider(favoriteRecipes: recipes)
 
         await view?.configure(state: .content(dataProvider: dataProvider))
+
+        if recipes.isEmpty {
+            await view?.configure(state: .emptyRecipes)
+        }
     }
 
     func loading() async {
