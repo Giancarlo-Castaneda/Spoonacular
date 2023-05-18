@@ -18,7 +18,6 @@ final class RecipeDetailViewController: UIViewController {
     // MARK: - Private Properties
 
     private let recipeId: String
-    private let favoritesRepository: FavoriteRecipesRepository
     private var recipe: RecipeInformationModel?
 
     // MARK: - Internal Properties
@@ -27,9 +26,8 @@ final class RecipeDetailViewController: UIViewController {
 
     // MARK: - Initialization
 
-    init(recipeId: String, favoritesRepository: FavoriteRecipesRepository) {
+    init(recipeId: String) {
         self.recipeId = recipeId
-        self.favoritesRepository = favoritesRepository
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -87,17 +85,8 @@ final class RecipeDetailViewController: UIViewController {
 
     @objc
     private func markFavorite() {
-        Task {
-            do {
-                guard let recipe else { return }
-
-                let recipeTosave = FavoriteRecipeModel.map(model: recipe)
-
-                let saved = try favoritesRepository.addFavorite(recipe: recipeTosave)
-            } catch {
-                print("::::error markFavorite", error.localizedDescription)
-            }
-        }
+        guard let recipe else { return }
+        interactor?.markAsFavorite(recipe: recipe)
     }
 
     private func loadImage(url: URL) {

@@ -6,7 +6,7 @@ final class FavoriteRecipesViewController: UIViewController {
 
     private lazy var tableView = UITableView(frame: .zero, style: .insetGrouped).with {
         $0.backgroundColor = .clear
-        $0.registerCell(UITableViewCell.self)
+        $0.registerCell(FavoriteRecipeCell.self)
         $0.dataSource = self
         $0.delegate = self
         $0.showsVerticalScrollIndicator = false
@@ -123,13 +123,8 @@ extension FavoriteRecipesViewController: UITableViewDataSource {
             let viewModel = dataProvider?.viewModel(at: indexPath)
         else { fatalError("Undefined view model for indexPath \(indexPath)") }
 
-        let cell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
-
-        var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = viewModel.title
-        contentConfiguration.textProperties.color = .systemMint
-
-        cell.contentConfiguration = contentConfiguration
+        let cell = tableView.dequeueCell(FavoriteRecipeCell.self, for: indexPath)
+        cell.configure(image: viewModel.image, title: viewModel.title, subtitle: viewModel.preparationTime)
 
         return cell
     }

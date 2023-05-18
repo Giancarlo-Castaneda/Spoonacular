@@ -2,6 +2,7 @@ import Foundation
 
 public protocol RecipeDetailInteractor {
 
+    func markAsFavorite(recipe: RecipeInformationModel)
     func fetchRecipeDetail(id: String)
 }
 
