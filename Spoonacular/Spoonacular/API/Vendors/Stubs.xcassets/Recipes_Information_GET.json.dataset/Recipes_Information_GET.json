@@ -1,0 +1,108 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": true,
+    "cheap": false,
+    "veryPopular": false,
+    "extendedIngredients": [
+        {
+            "id": 1111,
+            "image": "foo.extendedIngredients.0.image",
+            "consistency": "foo.extendedIngredients.0.consistency",
+            "name": "foo.extendedIngredients.0.name",
+            "nameClean": "foo.extendedIngredients.0.nameClean",
+            "original": "foo.extendedIngredients.0.original",
+            "originalName": "foo.extendedIngredients.0.originalName",
+            "amount": 0.11,
+            "unit": "foo.extendedIngredients.0.unit"
+        },
+        {
+            "id": 2222,
+            "image": "foo.extendedIngredients.1.image",
+            "consistency": "foo.extendedIngredients.1.consistency",
+            "name": "foo.extendedIngredients.1.name",
+            "nameClean": "foo.extendedIngredients.1.nameClean",
+            "original": "foo.extendedIngredients.1.original",
+            "originalName": "foo.extendedIngredients.1.originalName",
+            "amount": 0.22,
+            "unit": "foo.extendedIngredients.1.unit"
+        }
+    ],
+    "id": 3333,
+    "title": "foo.title",
+    "readyInMinutes": 4444,
+    "servings": 5555,
+    "image": "foo.com/images.jpg",
+    "imageType": "jpg",
+    "summary": "foo.summary",
+    "dishTypes": [
+        "foo.0.dish_types",
+        "foo.1.dish_types"
+    ],
+    "diets": [
+        "foo.0.diets",
+        "foo.1.diets"
+    ],
+    "instructions": "foo.instructions",
+    "analyzedInstructions": [
+        {
+            "name": "foo.analyzedInstructions.0.name",
+            "steps": [
+                {
+                    "number": 6666,
+                    "step": "foo.analyzedInstructions.0.steps.0.step",
+                    "ingredients": [
+                        {
+                            "id": 7777,
+                            "name": "foo.analyzedInstructions.0.steps.0.ingredients.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.0.ingredients.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.0.ingredients.0.image"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 8888,
+                            "name": "foo.analyzedInstructions.0.steps.0.equipment.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.0.equipment.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.0.equipment.0.image"
+                        }
+                    ]
+                },
+                {
+                    "number": 9999,
+                    "step": "foo.analyzedInstructions.0.steps.1.step",
+                    "ingredients": [
+                        {
+                            "id": 1111,
+                            "name": "foo.analyzedInstructions.0.steps.1.ingredients.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.ingredients.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.ingredients.0.image"
+                        },
+                        {
+                            "id": 2222,
+                            "name": "foo.analyzedInstructions.0.steps.1.ingredients.1.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.ingredients.1.name",
+                            "image": "foo.analyzedInstructions.0.steps.1.ingredients.1.name"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 3333,
+                            "name": "foo.analyzedInstructions.0.steps.1.equipment.0.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.equipment.0.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.equipment.0.image"
+                        },
+                        {
+                            "id": 4444,
+                            "name": "foo.analyzedInstructions.0.steps.1.equipment.1.name",
+                            "localizedName": "foo.analyzedInstructions.0.steps.1.equipment.1.localizedName",
+                            "image": "foo.analyzedInstructions.0.steps.1.equipment.1.image"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

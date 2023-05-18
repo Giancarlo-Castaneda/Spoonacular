@@ -1,0 +1,12 @@
+
+*.xcuserstate
+
+.DS_Store
+
+Spoonacular/Spoonacular.xcodeproj/xcuserdata/giancarlocastaneda.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.xcworkspacedata
+
+Spoonacular/Spoonacular.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+*.xcbkptlist
