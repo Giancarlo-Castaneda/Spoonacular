@@ -24,6 +24,7 @@ public class FavoriteRecipeModel: Object {
     static func map(model: RecipeInformationModel) -> FavoriteRecipeModel {
         let favorite = FavoriteRecipeModel()
 
+        favorite.id = model.id
         favorite.isVegetarian = model.isVegetarian
         favorite.isVegan = model.isVegan
         favorite.isGlutenFree = model.isGlutenFree
