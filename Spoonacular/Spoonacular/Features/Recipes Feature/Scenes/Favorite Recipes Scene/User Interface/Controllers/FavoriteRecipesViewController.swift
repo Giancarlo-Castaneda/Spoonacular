@@ -2,6 +2,8 @@ import UIKit
 
 final class FavoriteRecipesViewController: UIViewController {
 
+    // MARK: - View Components
+
     private lazy var tableView = UITableView(frame: .zero, style: .insetGrouped).with {
         $0.backgroundColor = .clear
         $0.registerCell(UITableViewCell.self)
@@ -10,15 +12,17 @@ final class FavoriteRecipesViewController: UIViewController {
         $0.showsVerticalScrollIndicator = false
     }
 
-    private let routeService: RouteService
-    private var favoriteRecipes: [RecipeInformationModel] = []
-    private let repo = ConcreteFavoriteRecipesRepository()
+    // MARK: - Private Properties
+
+    private var dataProvider: FavoriteRecipesDataProvider?
+
+    // MARK: - Internal Properties
+
+    var interactor: FavoriteRecipesInteractor?
 
     // MARK: - Initialization
 
-    init(routeService: RouteService) {
-        self.routeService = routeService
-
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -34,23 +38,13 @@ final class FavoriteRecipesViewController: UIViewController {
 
         setupUI()
         setupContraints()
-
-        favoriteRecipes = repo.fetchFavorites()
-        tableView.reloadData()
-
-        if favoriteRecipes.isEmpty {
-            let label = UILabel()
-            label.text = "No tienes recetas favoritas"
-            tableView.backgroundView = label
-        } else {
-            let label = UILabel()
-            label.text = favoriteRecipes.count.description
-            tableView.backgroundView = label
-        }
+        interactor?.fetchFavoriteRecipes()
     }
 
+    // MARK: - Private Properties
+
     private func setupUI() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemGray6
         title = "Favorite Recipes"
 
         view.addSubview(tableView)
@@ -59,6 +53,57 @@ final class FavoriteRecipesViewController: UIViewController {
     private func setupContraints() {
         tableView.layout.fillSuperview()
     }
+
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+
+        alert.addAction(okAction)
+        alert.view.tintColor = view.tintColor
+
+        present(alert, animated: true)
+    }
+
+    private func showEmptyView() {
+        let label = UILabel()
+        label.text = "Choose your favorite recipes.\nTo find them here."
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        tableView.backgroundView = label
+    }
+
+    private func resetView() {
+        tableView.backgroundView = nil
+    }
+
+    private func showLoading() {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.tintColor = view.tintColor
+        indicator.startAnimating()
+        tableView.backgroundView = indicator
+    }
+}
+
+// MARK: - FavoriteRecipesPresenterOutput
+
+extension FavoriteRecipesViewController: FavoriteRecipesPresenterOutput {
+
+    func configure(state: FavoriteRecipesViewState) {
+        resetView()
+
+        switch state {
+        case let .content(dataProvider):
+            self.dataProvider = dataProvider
+            tableView.reloadData()
+
+        case let .failure(title, message):
+            showEmptyView()
+            showAlert(title: title, message: message)
+
+        case .loading:
+            showLoading()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -66,15 +111,17 @@ final class FavoriteRecipesViewController: UIViewController {
 extension FavoriteRecipesViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        dataProvider?.numberOfSections() ?? 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        favoriteRecipes.count
+        dataProvider?.numberOfRows(inSection: section) ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = favoriteRecipes[indexPath.row]
+        guard
+            let viewModel = dataProvider?.viewModel(at: indexPath)
+        else { fatalError("Undefined view model for indexPath \(indexPath)") }
 
         let cell = tableView.dequeueCell(UITableViewCell.self, for: indexPath)
 
@@ -94,5 +141,15 @@ extension FavoriteRecipesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = view.backgroundColor
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
     }
 }

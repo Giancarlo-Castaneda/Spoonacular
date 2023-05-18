@@ -11,5 +11,7 @@ extension AppDelegate {
                                                                    routeService: appDependency.routeService))
 
         routeService.register(ConcreteRecipeDetailSceneRouteHandler(recipeRepository: appDependency.recipe.recipeRepository))
+
+        routeService.register(ConcreteFavoriteRecipesSceneRouteHandler(repository: appDependency.recipe.favoriteRecipesRepository))
     }
 }

@@ -16,6 +16,8 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
     // MARK: - Internal Methods
 
     func fetchFavorites() -> [RecipeInformationModel] {
+        realmDB = try! Realm()
+
         let favorites = realmDB.objects(FavoriteRecipeModel.self)
 
         return favorites.map { RecipeInformationModel($0) }

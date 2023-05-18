@@ -68,8 +68,7 @@ final class RecipeListViewController: UIViewController {
 
     @objc
     private func showFavorites() {
-        let vc = FavoriteRecipesViewController(routeService: routeService)
-        navigationController?.present(vc, animated: true)
+        routeService.navigate(to: FavoriteRecipesRoute(), from: self, presentationStyle: .currentContext)
     }
 
     private func setupContraints() {
