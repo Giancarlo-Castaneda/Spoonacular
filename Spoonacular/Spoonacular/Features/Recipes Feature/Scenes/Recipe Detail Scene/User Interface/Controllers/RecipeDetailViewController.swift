@@ -90,9 +90,8 @@ final class RecipeDetailViewController: UIViewController {
         Task {
             do {
                 guard let recipe else { return }
-                let recipeTosave = FavoriteRecipeModel()
-                recipeTosave.id = recipe.id
-                recipeTosave.image = recipe.image?.absoluteString ?? ""
+
+                let recipeTosave = FavoriteRecipeModel.map(model: recipe)
 
                 let saved = try favoritesRepository.addFavorite(recipe: recipeTosave)
             } catch {

@@ -23,18 +23,16 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
         return favorites.map { RecipeInformationModel($0) }
     }
 
-    func addFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel] {
+    func addFavorite(recipe: FavoriteRecipeModel) throws {
         if let _ = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id) {
             throw FavoriteRecipesRepositoryError.itemAlreadyExists
         }
         try realmDB.write {
             realmDB.add(recipe)
         }
-
-        return fetchFavorites()
     }
 
-    func deleteFavorite(recipe: FavoriteRecipeModel) throws -> [RecipeInformationModel] {
+    func deleteFavorite(recipe: FavoriteRecipeModel) throws {
         guard
             let recipeToDelete = realmDB.object(ofType: FavoriteRecipeModel.self, forPrimaryKey: recipe.id)
         else { throw FavoriteRecipesRepositoryError.itemNotFound }
@@ -42,12 +40,5 @@ final class ConcreteFavoriteRecipesRepository: FavoriteRecipesRepository {
         try realmDB.write {
             realmDB.delete(recipeToDelete)
         }
-
-        return fetchFavorites()
     }
-}
-
-public enum FavoriteRecipesRepositoryError: Error {
-    case itemAlreadyExists
-    case itemNotFound
 }

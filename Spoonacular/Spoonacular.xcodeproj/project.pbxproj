@@ -153,6 +153,7 @@
 		AB9CE4592A1605AA00841376 /* FavoriteRecipesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9CE4582A1605AA00841376 /* FavoriteRecipesRoute.swift */; };
 		AB9CE45C2A1605FB00841376 /* FavoriteRecipesSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9CE45B2A1605FB00841376 /* FavoriteRecipesSceneFactory.swift */; };
 		AB9CE45E2A1606CF00841376 /* ConcreteFavoriteRecipesSceneRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9CE45D2A1606CF00841376 /* ConcreteFavoriteRecipesSceneRouteHandler.swift */; };
+		AB9F89FB2A16855F008D290A /* FavoriteRecipesRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F89FA2A16855F008D290A /* FavoriteRecipesRepositoryError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +312,7 @@
 		AB9CE4582A1605AA00841376 /* FavoriteRecipesRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesRoute.swift; sourceTree = "<group>"; };
 		AB9CE45B2A1605FB00841376 /* FavoriteRecipesSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesSceneFactory.swift; sourceTree = "<group>"; };
 		AB9CE45D2A1606CF00841376 /* ConcreteFavoriteRecipesSceneRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteFavoriteRecipesSceneRouteHandler.swift; sourceTree = "<group>"; };
+		AB9F89FA2A16855F008D290A /* FavoriteRecipesRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesRepositoryError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				AB64B4452A157D6C00AE556D /* FavoriteRecipesRepository.swift */,
+				AB9F89FA2A16855F008D290A /* FavoriteRecipesRepositoryError.swift */,
 				AB4AC04E2A12E2780073BE6F /* RecipeRepository.swift */,
 			);
 			path = Repositories;
@@ -1701,6 +1704,7 @@
 				AB98A4562A141602000AABEE /* ConcreteRecipeViewModel.swift in Sources */,
 				AB64B4252A15242900AE556D /* RecipeDetailPresenterOutput.swift in Sources */,
 				AB4AC0242A12CD380073BE6F /* SpoonacularAPI+Recipes.swift in Sources */,
+				AB9F89FB2A16855F008D290A /* FavoriteRecipesRepositoryError.swift in Sources */,
 				AB98A4B42A148513000AABEE /* ConcreteRouteService.swift in Sources */,
 				AB64B4032A14AF5E00AE556D /* RecipeInstructionStepItemModel.swift in Sources */,
 				AB4AC07B2A12F2B70073BE6F /* ConcreteFetchRecipeListWorker.swift in Sources */,
