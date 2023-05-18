@@ -12,6 +12,7 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
 
     private var sut: SUT!
     private var mockFetchRecipeListWorker: MockFetchRecipeListWorker!
+    private var mockIsInternetReachableWorker: MockIsInternetReachableWorker!
     private var mockPresenter: MockRecipeListInteractorOutput!
 
     // MARK: Lifecycle
@@ -21,7 +22,9 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
 
         mockPresenter = .init()
         mockFetchRecipeListWorker = .init()
-        sut = SUT(fetchRecipeListWorker: mockFetchRecipeListWorker)
+        mockIsInternetReachableWorker = .init()
+        sut = SUT(fetchRecipeListWorker: mockFetchRecipeListWorker,
+                  isInternetReachableWorker: mockIsInternetReachableWorker)
         sut.presenter = mockPresenter
     }
 
@@ -39,6 +42,7 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
         let expectation = XCTestExpectation(description: #function)
         mockPresenter.expectation = expectation
         mockFetchRecipeListWorker.setStubValue(Helper.makeRecipeListModel(), for: .execute)
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
 
         XCTAssertFalse(mockFetchRecipeListWorker.verify([.execute]))
 
@@ -55,6 +59,7 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
     func test_fetchRecipes_shouldCallPresenterFetchedRecipes() async {
         let expectation = XCTestExpectation(description: #function)
         mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
         mockFetchRecipeListWorker.setStubValue(Helper.makeRecipeListModel(), for: .execute)
 
         XCTAssertFalse(mockPresenter.verify([.loading, .fetchedRecipes]))
@@ -66,9 +71,24 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
         XCTAssertTrue(mockPresenter.verify([.loading, .fetchedRecipes]))
     }
 
+    func test_fetchRecipes_whenIsInternetReachableWorkerReturnFalse_shouldCallPresenterNoInternetConnection() async {
+        let expectation = XCTestExpectation(description: #function)
+        mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(false, for: .execute)
+
+        XCTAssertFalse(mockPresenter.verify([.noInternetConnection]))
+
+        sut.fetchRecipes(query: "foo.query")
+
+        await fulfillment(of: [expectation], timeout: 1)
+
+        XCTAssertTrue(mockPresenter.verify([.noInternetConnection]))
+    }
+
     func test_fetchRecipes_whenFetchRecipeListWorkerThrowsError_shouldCallPresenterError() async {
         let expectation = XCTestExpectation(description: #function)
         mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
         mockFetchRecipeListWorker.setStubValue(Helper.makeError(code: 400), for: .execute)
 
         XCTAssertFalse(mockPresenter.verify([.loading, .error]))
@@ -83,6 +103,7 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
     func test_fetchRecipes_whenIsCalledMultiplesTimesBeforeResponse_shouldCallPresenterFetchedRecipesOnce() async throws {
         let expectation = XCTestExpectation(description: #function)
         mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
         let recipe = try Helper.makeRecipeModel()
         mockFetchRecipeListWorker.setStubValue(Helper.makeRecipeListModel(recipes: [recipe, recipe],
                                                                           totalResults: 2),
@@ -96,13 +117,14 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
         await fulfillment(of: [expectation], timeout: 1)
 
         XCTAssertTrue(mockPresenter.verify([.loading, .fetchedRecipes]))
-        XCTAssertEqual(mockPresenter.recevedRecipes.count, 2)
+        XCTAssertEqual(mockPresenter.receivedRecipes.count, 2)
     }
 
     func test_fetchRecipes_whenIsCalledMultiplesTimes_shouldCallPresenterFetchedRecipesMultiplesTimes() async throws {
         let expectation = XCTestExpectation(description: #function)
         expectation.expectedFulfillmentCount = 2
         mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
         let recipe = try Helper.makeRecipeModel()
         mockFetchRecipeListWorker.setStubValue(Helper.makeRecipeListModel(recipes: [recipe, recipe],
                                                                           totalResults: 111),
@@ -119,13 +141,14 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
         await fulfillment(of: [expectation], timeout: 2)
 
         XCTAssertTrue(mockPresenter.verify([.loading, .fetchedRecipes, .loading, .fetchedRecipes]))
-        XCTAssertEqual(mockPresenter.recevedRecipes.count, 4)
+        XCTAssertEqual(mockPresenter.receivedRecipes.count, 4)
     }
 
     func test_fetchRecipes_whenOffsetReachTotalResults_shouldNotCallPresenterFetchedRecipes() async throws {
         let expectation = XCTestExpectation(description: #function)
         expectation.expectedFulfillmentCount = 2
         mockPresenter.expectation = expectation
+        mockIsInternetReachableWorker.setStubValue(true, for: .execute)
         let recipe = try Helper.makeRecipeModel()
         mockFetchRecipeListWorker.setStubValue(Helper.makeRecipeListModel(recipes: [recipe, recipe],
                                                                           totalResults: 4),
@@ -146,6 +169,6 @@ final class ConcreteRecipeListInteractorTests: XCTestCase {
         await fulfillment(of: [expectation], timeout: 2)
 
         XCTAssertTrue(mockPresenter.verify([.loading, .fetchedRecipes, .loading, .fetchedRecipes]))
-        XCTAssertEqual(mockPresenter.recevedRecipes.count, 4)
+        XCTAssertEqual(mockPresenter.receivedRecipes.count, 4)
     }
 }

@@ -163,6 +163,7 @@
 		AB9F8A0C2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */; };
 		AB9F8A122A169EB6008D290A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A112A169EB6008D290A /* Realm */; };
 		AB9F8A142A169ECF008D290A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB9F8A132A169ECF008D290A /* RealmSwift */; };
+		AB9F8A162A169F7F008D290A /* MockIsInternetReachableWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9F8A152A169F7F008D290A /* MockIsInternetReachableWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +329,7 @@
 		AB9F8A042A16931C008D290A /* FavoriteRecipesRepositoryError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteRecipesRepositoryError+LocalizedError.swift"; sourceTree = "<group>"; };
 		AB9F8A092A169B44008D290A /* IsInternetReachableWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInternetReachableWorker.swift; sourceTree = "<group>"; };
 		AB9F8A0B2A169B68008D290A /* ConcreteIsInternetReachableWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteIsInternetReachableWorker.swift; sourceTree = "<group>"; };
+		AB9F8A152A169F7F008D290A /* MockIsInternetReachableWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIsInternetReachableWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -804,6 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4AC07E2A12F2DB0073BE6F /* MockFetchRecipeListWorker.swift */,
+				AB9F8A152A169F7F008D290A /* MockIsInternetReachableWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -1839,6 +1842,7 @@
 				AB4AC06E2A12EBAF0073BE6F /* ConcreteRecipeRepositoryTests.swift in Sources */,
 				AB4AC0492A12DF4B0073BE6F /* RecipeListModelTests.swift in Sources */,
 				AB98A46A2A1420DD000AABEE /* MockRecipesDataProviderFactory.swift in Sources */,
+				AB9F8A162A169F7F008D290A /* MockIsInternetReachableWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

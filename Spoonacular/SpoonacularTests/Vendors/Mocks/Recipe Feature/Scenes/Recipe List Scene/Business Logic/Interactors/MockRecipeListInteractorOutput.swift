@@ -8,6 +8,7 @@ final class MockRecipeListInteractorOutput: RecipeListInteractorOutput, Mockable
 
     enum Invocation {
         case fetchedRecipes
+        case noInternetConnection
         case loading
         case error
     }
@@ -15,7 +16,7 @@ final class MockRecipeListInteractorOutput: RecipeListInteractorOutput, Mockable
     // MARK: - Internal Properties
 
     var receivedError: Error?
-    var recevedRecipes: [RecipeModel] = []
+    var receivedRecipes: [RecipeModel] = []
     var expectation: XCTestExpectation?
 
     // MARK: - Internal Methods
@@ -23,7 +24,13 @@ final class MockRecipeListInteractorOutput: RecipeListInteractorOutput, Mockable
     func fetchedRecipes(recipes: [RecipeModel]) async {
         append(.fetchedRecipes)
 
-        recevedRecipes = recipes
+        receivedRecipes = recipes
+
+        expectation?.fulfill()
+    }
+
+    func noInternetConnection() async {
+        append(.noInternetConnection)
 
         expectation?.fulfill()
     }

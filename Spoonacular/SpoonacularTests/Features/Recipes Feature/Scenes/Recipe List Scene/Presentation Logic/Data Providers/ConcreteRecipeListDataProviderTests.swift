@@ -35,7 +35,7 @@ final class ConcreteRecipeListDataProviderTests: XCTestCase {
 
         sut = SUT(recipes: [recipe, recipe, recipe], viewModelFactory: mockViewModelFactory)
 
-        XCTAssertEqual(sut.numberOfSections(), 1)
+        XCTAssertEqual(sut.numberOfSections(), 3)
     }
 
     func test_numberOfRows_shouldReturnValue() throws {
@@ -44,7 +44,7 @@ final class ConcreteRecipeListDataProviderTests: XCTestCase {
 
         sut = SUT(recipes: [recipe, recipe], viewModelFactory: mockViewModelFactory)
 
-        XCTAssertEqual(sut.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(sut.numberOfRows(inSection: 0), 1)
     }
 
     func test_numberOfRows_whenSectionOutOfRange_shouldReturnZero() throws {
@@ -67,10 +67,10 @@ final class ConcreteRecipeListDataProviderTests: XCTestCase {
 
         XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 0))?.title, "foo.0.title")
         XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 0))?.image.absoluteString, "foo/0.com")
-        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 1, section: 0))?.title, "foo.1.title")
-        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 1, section: 0))?.image.absoluteString, "foo/1.com")
-        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 2, section: 0))?.title, "foo.2.title")
-        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 2, section: 0))?.image.absoluteString, "foo/2.com")
+        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 1))?.title, "foo.1.title")
+        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 1))?.image.absoluteString, "foo/1.com")
+        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 2))?.title, "foo.2.title")
+        XCTAssertEqual(sut.viewModel(at: IndexPath(row: 0, section: 2))?.image.absoluteString, "foo/2.com")
     }
 
     func test_viewModel_whenIndexPathOutOfRange_shouldReturnNil() throws {
